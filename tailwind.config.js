@@ -9,9 +9,15 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      'poppins': ["Poppins", 'sans-serif',],
+      'inter': ["Inter", 'sans-serif',],
+      'raleway': ["Raleway", 'sans-serif'],
+      'lato': ["Lato", 'sans-serif',],
+      'arial': ['Helvetica','Arial', 'san-serif']
+    },
     container: {
       center: true,
-      padding: "2rem",
       screens: {
         "2xl": "950px",
       },

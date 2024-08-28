@@ -7,7 +7,7 @@ const layout = () => {
         <>
             <Header />
             <ScrollToTop />
-            <main>
+            <main className=" ">
                 <Outlet />
             </main>
         </>

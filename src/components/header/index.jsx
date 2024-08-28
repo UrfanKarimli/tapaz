@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaPhoneAlt, FaHeart, FaUserCircle } from "react-icons/fa";
 import { AiFillMessage } from "react-icons/ai";
+import { BsPlusCircle } from "react-icons/bs";
 import Logo from '@/assets/img/logo-tap-az.svg'
-import Katalog from './Katalog';
+import Katalog from './components/katalog';
+import Filter from './components/filter';
 
 
 const Header = () => {
@@ -30,12 +32,17 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="header-bottom bg-[#ff4f08]">
-                <div className="container flex items-center">
+            <div className="header-bottom bg-[#ff4f08] py-4">
+                <div className="container flex items-center gap-3 max-h-10">
                     <Link className='' to={'#'}>
                         <img src={Logo} alt="" />
                     </Link>
                     <Katalog />
+                    <Filter />
+                    <Link className=' truncate rounded-[7px] h-10 bg-[#7ed321] text-white cursor-pointer flex gap-1 items-center py-3 px-4'>
+                        <span> <BsPlusCircle className='h-4 w-4' /></span>
+                        Yeni elan
+                    </Link>
                 </div>
             </div>
         </header>
@@ -43,3 +50,4 @@ const Header = () => {
 }
 
 export default Header
+ 
