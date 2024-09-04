@@ -14,7 +14,8 @@ module.exports = {
       'inter': ["Inter", 'sans-serif',],
       'raleway': ["Raleway", 'sans-serif'],
       'lato': ["Lato", 'sans-serif',],
-      'arial': ['Helvetica','Arial', 'san-serif']
+      'arial': ['Helvetica', 'Arial', 'san-serif'],
+      'bebas': ["Bebas Neue", 'sans-serif']
     },
     container: {
       center: true,
@@ -23,6 +24,10 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        'custom-light': '0 17px 34px 0 rgba(44,39,56,0.04), 0 8px 17px 0 rgba(44,39,56,0.02)',
+      },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
