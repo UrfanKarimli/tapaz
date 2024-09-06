@@ -3,6 +3,8 @@ import { cardDatas } from '../mockData'
 import Card from '../card'
 
 const VipElanlar = () => {
+
+  const cutDatas = cardDatas.slice(0,8)
   return (
     <section id='vip-elanlar'>
       <div className="banner bg-[#f6f7fa] h-14 mb-6 border-y-[1px] border-y-[#f6f7fa] flex items-center">
@@ -19,7 +21,7 @@ const VipElanlar = () => {
       </div>
       <div className="container flex flex-wrap gap-3">
           {
-            cardDatas.map((item) => (
+            cutDatas.map((item) => (
               <Card 
               item={item} key={item.id} />
             ))

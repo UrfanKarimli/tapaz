@@ -10,6 +10,7 @@ import Filter from './components/filter';
 
 const Header = () => {
     return (
+        
         <header >
             <div className="header-top bg-[#f8f9fd] ">
                 <div className="container flex items-center justify-between text-[#212c3a] py-1 text-base">
@@ -22,7 +23,9 @@ const Header = () => {
                     </div>
                     <div className="right">
                         <ul className='flex items-center gap-5'>
-                            <li><a href="#" className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center group gap-1' ><FaPhoneAlt /> <span className='text-black group-hover:text-[#ff4f08]'>(050) 756-41-77</span></a></li>
+                            <li>
+                                <a href="#" className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center group gap-1' ><FaPhoneAlt /> <span className='text-black group-hover:text-[#ff4f08]'>(050) 756-41-77</span></a>
+                                </li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
