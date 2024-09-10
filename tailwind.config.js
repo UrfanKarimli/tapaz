@@ -15,7 +15,8 @@ module.exports = {
       'raleway': ["Raleway", 'sans-serif'],
       'lato': ["Lato", 'sans-serif',],
       'arial': ['Helvetica', 'Arial', 'san-serif'],
-      'bebas': ["Bebas Neue", 'sans-serif']
+      'bebas': ["Bebas Neue", 'sans-serif'],
+      'helvetica': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
     },
     container: {
       center: true,

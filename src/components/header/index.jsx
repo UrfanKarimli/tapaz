@@ -26,7 +26,7 @@ const Header = () => {
                             <li>
                                 <a href="#" className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center group gap-1' ><FaPhoneAlt /> <span className='text-black group-hover:text-[#ff4f08]'>(050) 756-41-77</span></a>
                                 </li>
-                            <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
+                            <li><Link to={'/help/popular_questions'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <FaHeart />Seçilmişlər</Link></li>
@@ -37,7 +37,7 @@ const Header = () => {
             </div>
             <div className="header-bottom bg-[#ff4f08] py-4">
                 <div className="container flex items-center gap-3 max-h-10">
-                    <Link className='' to={'#'}>
+                    <Link className='' to={'/'}>
                         <img src={Logo} alt="" />
                     </Link>
                     <Katalog />
