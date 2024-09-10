@@ -31,7 +31,6 @@ const Help = () => {
         }
     }
 
-
     const getData = () => {
         switch (type) {
             case 'popular_questions':
