@@ -6,9 +6,11 @@ import { BsPlusCircle } from "react-icons/bs";
 import Logo from '@/assets/img/logo-tap-az.svg'
 import Katalog from './components/katalog';
 import Filter from './components/filter';
+import { useLikedAd } from '@/services/stores/useLikedAd';
 
 
 const Header = () => {
+    const { likedData } = useLikedAd();
     return (
         
         <header >
@@ -29,7 +31,7 @@ const Header = () => {
                             <li><Link to={'/help/popular_questions'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
-                            <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <FaHeart />Seçilmişlər</Link></li>
+                            <li><Link to={'/chosen'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <FaHeart />Seçilmişlər <sup className=' text-[#ff4f08] text-[12px] font-bold'>{likedData.length}</sup></Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <FaUserCircle /> Giriş</Link></li>
                         </ul>
                     </div>
