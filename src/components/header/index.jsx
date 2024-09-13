@@ -13,7 +13,7 @@ const Header = () => {
     const { likedData } = useLikedAd();
     return (
         
-        <header >
+        <header className=' sticky top-0 z-40' >
             <div className="header-top bg-[#f8f9fd] ">
                 <div className="container flex items-center justify-between text-[#212c3a] py-1 text-base">
                     <div className="left">
