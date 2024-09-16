@@ -1430,7 +1430,7 @@ export const Ads = {
                     "price": 1199,
                     "description": "The iPhone 15 Pro Max offers a stunning display, powerful performance, and advanced camera features.",
                     "category": "smartphone",
-                    "image": "",
+                    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-whitetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=VW44dkRidm5wazhwcGxtL0cyaEJ2VTkrNXBUdUJSK1k4NE5seUtJaW80ZkRmbnd3M3NkTWdNTTIrREE3akpCaWlCQmV2WTA2cncybDF2YzFnKzI0S3J4M3lYcDIyK01lckZBaW5GTC9DMEQxcjBVRyswWG14bEI4WVZBcUIybEZjbk10T2pDQ3hjTkVEUGVzeFhCeVRnPT0=&traceId=1",
                     "rating": {
                         "rate": 4.9,
                         "count": 500
@@ -1458,7 +1458,7 @@ export const Ads = {
                     "price": 999,
                     "description": "The iPhone 15 brings exceptional performance, a gorgeous display, and new camera features in a compact design.",
                     "category": "smartphone",
-                    "image": "",
+                    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OGlYQ0tYMHd1OS9ZREtnNzFSR1owOHF2TWlpSzUzejRCZGt2SjJUNGl1VExZc3g4ZkhUVEc0bFNFL1l3MHJZd1VOWURGTDRNb1FOSGhVN2M4eGh6OGY=&traceId=1",
                     "rating": {
                         "rate": 4.8,
                         "count": 450
@@ -1488,7 +1488,7 @@ export const Ads = {
                     "price": 1299,
                     "description": "The Samsung Galaxy S24 Ultra offers a premium experience with a high-resolution display, powerful processor, and an advanced camera system.",
                     "category": "smartphone",
-                    "image": "",
+                    "image": "https://images.samsung.com/az/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-black-back-mo.jpg?imbypass=true",
                     "rating": {
                         "rate": 4.7,
                         "count": 600
@@ -1516,7 +1516,7 @@ export const Ads = {
                     "price": 999,
                     "description": "The Samsung Galaxy Note 20 is designed for productivity and performance with its large display, S Pen, and powerful hardware.",
                     "category": "smartphone",
-                    "image": "",
+                    "image": "https://images.samsung.com/latin_en/smartphones/galaxy-note20/models/images/galaxy-note20-ultra_models_colors_mystic-bronze-front_s.jpg",
                     "rating": {
                         "rate": 4.5,
                         "count": 400
@@ -1548,7 +1548,7 @@ export const Ads = {
                     "price": 1899,
                     "description": "The Dell XPS 15 combines power and portability with its 15.6-inch InfinityEdge display, high-performance components, and sleek design.",
                     "category": "laptop",
-                    "image": "",
+                    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/touch-black/notebook-xps-15-9530-t-black-gallery-4.psd?fmt=pjpg&pscan=auto&scl=1&wid=3482&hei=2067&qlt=100,1&resMode=sharp2&size=3482,2067&chrss=full&imwidth=5000",
                     "rating": {
                         "rate": 4.6,
                         "count": 250
@@ -1576,7 +1576,7 @@ export const Ads = {
                     "price": 2299,
                     "description": "The Dell Alienware x17 is designed for gaming enthusiasts, offering high-end performance, a large 17.3-inch display, and customizable RGB lighting.",
                     "category": "gaming laptop",
-                    "image": "",
+                    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-x17-r2/media-gallery/updated/laptop-alienware-x17-r2-gray-gallery-7.psd?fmt=pjpg&pscan=auto&scl=1&wid=4171&hei=2700&qlt=100,1&resMode=sharp2&size=4171,2700&chrss=full&imwidth=5000",
                     "rating": {
                         "rate": 4.8,
                         "count": 150
@@ -1599,14 +1599,14 @@ export const Ads = {
                     "is_new": true
                 }
             ],
-            "MackBook": [
+            "MacBook": [
                 {
                     "id": 81,
                     "title": "MacBook Air M2",
                     "price": 1199,
                     "description": "The MacBook Air M2 is Apple's latest ultra-thin laptop featuring the M2 chip, a stunning Retina display, and all-day battery life.",
                     "category": "laptop",
-                    "image": "",
+                    "image": "https://laptopmedia.com/wp-content/uploads/2022/08/7-8.jpg",
                     "rating": {
                         "rate": 4.7,
                         "count": 300
@@ -1634,7 +1634,7 @@ export const Ads = {
                     "price": 2499,
                     "description": "The MacBook Pro 16-inch is designed for professionals, featuring Apple's M1 Pro or M1 Max chip, a large high-resolution display, and enhanced performance for demanding tasks.",
                     "category": "laptop",
-                    "image": "",
+                    "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-mbp16touch-silver-gallery-2019_GEO_AU?wid=1250&hei=1200&fmt=jpeg&qlt=95&.v=1626200862000",
                     "rating": {
                         "rate": 4.9,
                         "count": 200
