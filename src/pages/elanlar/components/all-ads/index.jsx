@@ -1,28 +1,7 @@
-import { cardDatas } from '@/pages/home/components/mockData';
 import Card from '@/components/card';
-import { Ads } from '@/components/mockData';
 
-const AllAds = () => {
-    const Audi = Ads.Transports.cars.Audi
-    const Mercedes = Ads.Transports.cars.Mercedes
-    const BMW = Ads.Transports.cars.BMW
-    const cars = [...Audi, ...Mercedes, ...BMW]
-    const Yamaha = Ads.Transports.bikes.Yamaha
-    const Honda = Ads.Transports.bikes.Honda
-    const bikes = [...Yamaha, ...Honda]
-    const Transports = [...cars, ...bikes]
-    const Apple = Ads.Electronica.Phones.Apple
-    const Samsung = Ads.Electronica.Phones.Samsung
-    const MacBook = Ads.Electronica.Computers.MacBook
-    const Dell = Ads.Electronica.Computers.Dell
-    const Phones = [...Apple, ...Samsung]
-    const Computers = [...MacBook, ...Dell]
-    const Electronica = [...Phones, ...Computers]
+const AllAds = ({CardDatas}) => {
 
-
-    const AllAds = [...Transports, ...Electronica, ...cardDatas]
-
-    const CardDatas = AllAds.sort(() => Math.random() - 0.5);;
 
     return (
         <section id='butun-elanlar'>
@@ -33,10 +12,10 @@ const AllAds = () => {
             </div>
             <div className="container flex flex-wrap gap-3">
                 {
-                    CardDatas.map((item) => (
+                    CardDatas.map((item, index) => (
                         <Card
                             item={item}
-                            key={item.id}
+                            key={index}
                         />
                     ))
                 }
