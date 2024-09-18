@@ -1,42 +1,21 @@
 import { Ads } from '@/components/mockData';
 
-/**
- * Verilen parametrelere göre verileri filtreleyen fonksiyon
- * @param {Object} params - Parametreler
- * @param {string} [params.cate] - Kategori adı (örneğin, 'Transports', 'Electronica')
- * @param {string} [params.subcate] - Alt kategori adı (örneğin, 'cars', 'bikes', 'Phones', 'Computers')
- * @param {string} [params.item] - Spesifik bir öğe adı (örneğin, 'BMW', 'MacBook')
- * @returns {Array} - Filtrelenmiş veri arrayi
- */
-const getFilteredData = ({ cate, subcate, item }) => {
+const getFilteredData = ({ cate, subcate, items }) => {
     let filteredData = [];
-
     if (cate) {
-        // Eğer sadece cate varsa
-        if (Ads[cate]) {
-            if (subcate) {
-                // Eğer subcate varsa
-                if (Ads[cate][subcate]) {
-                    if (item) {
-                        // Eğer item varsa
-                        filteredData = Ads[cate][subcate][item] || [];
-                    } else {
-                        // Sadece subcate varsa
-                        filteredData = Object.values(Ads[cate][subcate]).flat();
-                    }
-                }
-            } else {
-                // Sadece cate varsa
-                filteredData = Object.values(Ads[cate]).flat().flat();
+        const filteredcate = Object.values(Ads[cate]);
+        filteredData = filteredcate.flatMap(subObj => Object.values(subObj)).flat()
+        if (cate && subcate) {
+            filteredData = Object.values(Ads[cate][subcate]).flat();
+            if (cate && subcate && items) {
+                filteredData = Object.values(Ads[cate][subcate][items])
             }
         }
     } else {
-        // Hiçbir parametre yoksa
-        filteredData = Object.values(Ads).flatMap(category => 
-            Object.values(category).flat()
-        );
+        const filteredAll = Object.values(Ads);
+        const final = filteredAll.flatMap(subObj => Object.values(subObj))
+        filteredData = final.flatMap(subObj => Object.values(subObj)).flat()
     }
-
     return filteredData;
 }
 

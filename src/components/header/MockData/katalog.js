@@ -9,7 +9,7 @@ export const Katalog = [
                 name: 'Avtomobillər',
                 path: 'cars',
                 items: [
-                    { id: 1, path: 'Mercedes-Benz', itemName: 'Mercedes-Benz' },
+                    { id: 1, path: 'Mercedes', itemName: 'Mercedes' },
                     { id: 2, path: 'Audi', itemName: 'Audi' },
                     { id: 3, path: 'BMW', itemName: 'BMW' }
                 ]
