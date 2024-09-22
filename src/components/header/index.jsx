@@ -18,9 +18,9 @@ const Header = () => {
                 <div className="container flex items-center justify-between text-[#212c3a] py-1 text-base">
                     <div className="left">
                         <ul className=' flex items-center gap-4'>
-                            <li><a href="turbo.az" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Turbo.az</a></li>
-                            <li><a href="bina.az" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Bina.az</a></li>
-                            <li><a href="boss.az" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Boss.az</a></li>
+                            <li><a href="https://turbo.az/" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Turbo.az</a></li>
+                            <li><a href="https://bina.az" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Bina.az</a></li>
+                            <li><a href="https://boss.az" target='_blank' className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Boss.az</a></li>
                         </ul>
                     </div>
                     <div className="right">

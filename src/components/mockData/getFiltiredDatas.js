@@ -2,7 +2,7 @@ import { Ads } from '@/components/mockData';
 
 const getFilteredData = ({ cate, subcate, items }) => {
     let filteredData = [];
-    if (cate) {
+    if (cate ) {
         const filteredcate = Object.values(Ads[cate]);
         filteredData = filteredcate.flatMap(subObj => Object.values(subObj)).flat()
         if (cate && subcate) {
