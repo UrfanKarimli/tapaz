@@ -32,7 +32,7 @@ const Katalog = () => {
                     <DropdownMenuLabel>Kataloq</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                        {katalogData.map((category) => (
+                        {katalogData?.map((category) => (
                             <DropdownMenuSub key={category.id}>
                                 <Link to={`/elanlar/${category.path}`}>
                                     <DropdownMenuSubTrigger >
@@ -40,7 +40,7 @@ const Katalog = () => {
                                     </DropdownMenuSubTrigger></Link>
                                 <DropdownMenuPortal>
                                     <DropdownMenuSubContent>
-                                        {category.subCategories.map((subCategory) => (
+                                        {category?.subCategories?.map((subCategory) => (
                                             <DropdownMenuSub key={subCategory.id}>
                                                 <Link to={`/elanlar/${category.path}/${subCategory.path}`}>
                                                     <DropdownMenuSubTrigger>
@@ -49,7 +49,7 @@ const Katalog = () => {
                                                 </Link>
                                                 <DropdownMenuPortal>
                                                     <DropdownMenuSubContent>
-                                                        {subCategory.items.map((item) => (
+                                                        {subCategory?.items?.map((item) => (
                                                             <DropdownMenuItem key={item.id}>
                                                                 <Link className=" w-full" to={`/elanlar/${category.path}/${subCategory.path}/${item.path}`} >{item.itemName}</Link>
                                                                 <DropdownMenuSeparator />
@@ -58,11 +58,21 @@ const Katalog = () => {
                                                     </DropdownMenuSubContent>
                                                 </DropdownMenuPortal>
                                             </DropdownMenuSub>
-                                        ))}
+                                        ))
+
+                                        }
                                     </DropdownMenuSubContent>
                                 </DropdownMenuPortal>
                             </DropdownMenuSub>
                         ))}
+                        <DropdownMenuSub key={12}>
+                            <Link to={`/elanlar/shop`}>
+                                <DropdownMenuSubTrigger className={'[&>svg]:hidden'}  >
+                                    Mağazalar
+                                </DropdownMenuSubTrigger>
+                            </Link>
+                        </DropdownMenuSub>
+
                     </DropdownMenuGroup>
                 </DropdownMenuContent>
             </DropdownMenu>

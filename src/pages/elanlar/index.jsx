@@ -20,10 +20,10 @@ const Elanlar = () => {
 
   
   const CardDatas = filteredAds.sort(() => Math.random() - 0.5);;
-
+const Length = CardDatas.length
   return (
     <>
-      <CategoryHead />
+      <CategoryHead Length={Length} />
       <VipAds cardDatas={CardDatas} />
       <AllAds CardDatas={CardDatas}/>
     </>

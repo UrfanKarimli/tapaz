@@ -5,6 +5,7 @@ import Help from "./pages/help";
 import Chosen from "./pages/chosen";
 import Elanlar from "./pages/elanlar";
 import AllVip from "./pages/elanlar/components/all-vip";
+import Shops from "./pages/shop";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -15,6 +16,7 @@ export const router = createBrowserRouter(
                 <Route path="/chosen" element={<Chosen/>}/>
                 <Route path="/elanlar/:cate?/:subcate?/:items?/:id?" element={<Elanlar/>}/>
                 <Route path="/elanlar/vip" element={<AllVip/>}/>
+                <Route path="/elanlar/shop" element={<Shops/>}/>
             </Route>
             
         </Route>,

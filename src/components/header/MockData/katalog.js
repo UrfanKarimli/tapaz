@@ -2,12 +2,12 @@ export const Katalog = [
     {
         id: 1,
         name: 'Nəqliyyat',
-        path: 'Transports',
+        path: 'Nəqliyyat',
         subCategories: [
             {
                 id: 1,
                 name: 'Avtomobillər',
-                path: 'cars',
+                path: 'Avtomobillər',
                 items: [
                     { id: 1, path: 'Mercedes', itemName: 'Mercedes' },
                     { id: 2, path: 'Audi', itemName: 'Audi' },
@@ -17,7 +17,7 @@ export const Katalog = [
             {
                 id: 2,
                 name: 'Motosikletlər',
-                path: 'bikes',
+                path: 'Motosikletlər',
                 items: [
                     { id: 1, path: 'Yamaha', itemName: 'Yamaha' },
                     { id: 2, path: 'Honda', itemName: 'Honda' }
@@ -28,12 +28,12 @@ export const Katalog = [
     {
         id: 2,
         name: 'Elektronika',
-        path: 'Electronica',
+        path: 'Elektronika',
         subCategories: [
             {
                 id: 1,
                 name: 'Telefonlar',
-                path: 'Phones',
+                path: 'Telefonlar',
                 items: [
                     { id: 1, path: 'Apple', itemName: 'iPhone' },
                     { id: 2, path: 'Samsung', itemName: 'Samsung' }
@@ -42,7 +42,7 @@ export const Katalog = [
             {
                 id: 2,
                 name: 'Kompüterlər',
-                path: 'Computers',
+                path: 'Kompüterlər',
                 items: [
                     { id: 1,path: 'MacBook', itemName: 'MacBook' },
                     { id: 2,path: 'Dell', itemName: 'Dell' }
@@ -53,24 +53,24 @@ export const Katalog = [
     {
         id: 3,
         name: 'Xidmətlər',
-        path: 'Electronica',
+        path: 'Xidmətlər',
         subCategories: [
             {
                 id: 1,
                 name: 'Təmir',
-                path: '',
+                path: 'Təmir',
                 items: [
-                    { id: 1, path: '', itemName: 'Avtomobil Təmir' },
-                    { id: 2, path: '', itemName: 'Ev Təmir' }
+                    { id: 1, path: 'Avtomobil təmiri', itemName: 'Avtomobil təmiri' },
+                    { id: 2, path: 'Ev təmiri', itemName: 'Ev təmiri' }
                 ]
             },
             {
                 id: 2,
                 name: 'Təhsil',
-                path: '',
+                path: 'Təhsil',
                 items: [
-                    { id: 1, path: '', itemName: 'Dərslər' },
-                    { id: 2, path: '', itemName: 'Təlimlər' }
+                    { id: 1, path: 'Dərslər', itemName: 'Dərslər' },
+                    { id: 2, path: 'Təlimlər', itemName: 'Təlimlər' }
                 ]
             }
         ]
@@ -78,24 +78,24 @@ export const Katalog = [
     {
         id: 4,
         name: 'Biznes',
-        path: '',
+        path: 'Biznes',
         subCategories: [
             {
                 id: 1,
                 name: 'Ofis Əşyaları',
-                path: '',
+                path: 'Ofis Əşyaları',
                 items: [
-                    { id: 1, path: '', itemName: 'Masa' },
-                    { id: 2, path: '', itemName: 'Stul' }
+                    { id: 1, path: 'Masa', itemName: 'Masa' },
+                    { id: 2, path: 'Stul', itemName: 'Stul' }
                 ]
             },
             {
                 id: 2,
                 name: 'Reklam və Marketinq',
-                path: '',
+                path: 'Reklam və Marketinq',
                 items: [
-                    { id: 1, path: '', itemName: 'Reklam Kampaniyaları' },
-                    { id: 2, path: '', itemName: 'Marketinq Strategiyaları' }
+                    { id: 1, path: 'Reklam kampaniyaları', itemName: 'Reklam kampaniyaları' },
+                    { id: 2, path: 'Marketinq strategiyaları', itemName: 'Marketinq strategiyaları' }
                 ]
             }
         ]
@@ -103,24 +103,24 @@ export const Katalog = [
     {
         id: 5,
         name: 'Şəxsi əşyalar',
-        path: '',
+        path: 'Şəxsi əşyalar',
         subCategories: [
             {
                 id: 1,
                 name: 'Geyim',
-                path: '',
+                path: 'Geyim',
                 items: [
-                    { id: 1, path: '', itemName: 'Köynək' },
-                    { id: 2, path: '', itemName: 'Şalvar' }
+                    { id: 1, path: 'Köynək', itemName: 'Köynək' },
+                    { id: 2, path: 'Şalvar', itemName: 'Şalvar' }
                 ]
             },
             {
                 id: 2,
                 name: 'Aksesuarlar',
-                path: '',
+                path: 'Aksesuarlar',
                 items: [
-                    { id: 1, path: '', itemName: 'Saat' },
-                    { id: 2, path: '', itemName: 'Gözlük' }
+                    { id: 1, path: 'Saat', itemName: 'Saat' },
+                    { id: 2, path: 'Eynək', itemName: 'Eynək' }
                 ]
             }
         ]
@@ -128,24 +128,24 @@ export const Katalog = [
     {
         id: 6,
         name: 'Hobbi və Asudə',
-        path: '',
+        path: 'Hobbi və Asudə',
         subCategories: [
             {
                 id: 1,
                 name: 'İdman',
-                path: '',
+                path: 'İdman',
                 items: [
-                    { id: 1, path: '', itemName: 'Futbol Topu' },
-                    { id: 2, path: '', itemName: 'Boks Əlcəyi' }
+                    { id: 1, path: 'Futbol Topu', itemName: 'Futbol Topu' },
+                    { id: 2, path: 'Boks Əlcəyi', itemName: 'Boks Əlcəyi' }
                 ]
             },
             {
                 id: 2,
                 name: 'Əl İşləri',
-                path: '',
+                path: 'Əl İşləri',
                 items: [
-                    { id: 1, path: '', itemName: 'Rəsm' },
-                    { id: 2, path: '', itemName: 'Toxumalar' }
+                    { id: 1, path: 'Rəsm', itemName: 'Rəsm' },
+                    { id: 2, path: 'Toxumalar', itemName: 'Toxumalar' }
                 ]
             }
         ]
@@ -153,24 +153,24 @@ export const Katalog = [
     {
         id: 7,
         name: 'Uşaq aləmi',
-        path: '',
+        path: 'Uşaq aləmi',
         subCategories: [
             {
                 id: 1,
                 name: 'Oyuncaq',
-                path: '',
+                path: 'Oyuncaq',
                 items: [
-                    { id: 1, path: '',  itemName: 'Maşın' },
-                    { id: 2, path: '', itemName: 'Lego' }
+                    { id: 1, path: 'Maşın',  itemName: 'Maşın' },
+                    { id: 2, path: 'Lego', itemName: 'Lego' }
                 ]
             },
             {
                 id: 2,
                 name: 'Geyim',
-                path: '',
+                path: 'Geyim',
                 items: [
-                    { id: 1, path: '', itemName: 'Uşaq Geyimi' },
-                    { id: 2, path: '', itemName: 'Ayakkabılar' }
+                    { id: 1, path: 'Uşaq Geyimi', itemName: 'Uşaq Geyimi' },
+                    { id: 2, path: 'Ayakkabılar', itemName: 'Ayakkabılar' }
                 ]
             }
         ]
@@ -178,24 +178,24 @@ export const Katalog = [
     {
         id: 8,
         name: 'Heyvanlar',
-        path: '',
+        path: 'Heyvanlar',
         subCategories: [
             {
                 id: 1,
                 name: 'Ev Heyvanları',
-                path: '',
+                path: 'Ev Heyvanları',
                 items: [
-                    { id: 1, path: '', itemName: 'İt' },
-                    { id: 2, path: '', itemName: 'Pişik' }
+                    { id: 1, path: 'İt', itemName: 'İt' },
+                    { id: 2, path: 'Pişik', itemName: 'Pişik' }
                 ]
             },
             {
                 id: 2,
                 name: 'Təsərüfat Heyvanları',
-                path: '',
+                path: 'Təsərüfat Heyvanları',
                 items: [
-                    { id: 1, path: '', itemName: 'At' },
-                    { id: 2, path: '', itemName: 'İnək' }
+                    { id: 1, path: 'At', itemName: 'At' },
+                    { id: 2, path: 'İnək', itemName: 'İnək' }
                 ]
             }
         ]
@@ -203,75 +203,52 @@ export const Katalog = [
     {
         id: 9,
         name: 'İş elanları',
-        path: '',
+        path: 'İş elanları',
         subCategories: [
             {
                 id: 1,
                 name: 'Tam Zamanlı',
-                path: '',
+                path: 'Tam Zamanlı',
                 items: [
-                    { id: 1, path: '', itemName: 'Mühəndis' },
-                    { id: 2, path: '', itemName: 'Satış Meneceri' }
+                    { id: 1, path: 'Mühəndis', itemName: 'Mühəndis' },
+                    { id: 2, path: 'Satış Meneceri', itemName: 'Satış Meneceri' }
                 ]
             },
             {
                 id: 2,
                 name: 'Qismən Zamanlı',
-                path: '',
+                path: 'Qismən Zamanlı',
                 items: [
-                    { id: 1, path: '', itemName: 'Ofis Köməkçisi' },
-                    { id: 2, path: '', itemName: 'Kuryer' }
+                    { id: 1, path: 'Ofis Köməkçisi', itemName: 'Ofis Köməkçisi' },
+                    { id: 2, path: 'Kuryer', itemName: 'Kuryer' }
                 ]
             }
         ]
     },
     {
         id: 10,
-        name: 'Mağazalar',
-        path: '',
-        subCategories: [
-            {
-                id: 1,
-                name: '',
-                path: '',
-                items: [
-                    { id: 1, path: '', itemName: 'Soliton' },
-                    { id: 2, path: '', itemName: 'İrshad' }
-                ]
-            },
-            {
-                id: 2,
-                name: 'Geyim',
-                items: [
-                    { id: 1, itemName: 'Zara' },
-                    { id: 2, itemName: 'Bershka' }
-                ]
-            }
-        ]
-    },
-    {
-        id: 11,
         name: 'Velosipedlər',
-        path: '',
+        path: 'Velosipedlər',
         subCategories: [
             {
                 id: 1,
                 name: 'Yol Velosipedləri',
-                path: '',
+                path: 'Yol Velosipedləri',
                 items: [
-                    { id: 1, path: '', itemName: 'Bianci' },
-                    { id: 2, path: '', itemName: 'Steels' }
+                    { id: 1, path: 'Bianci', itemName: 'Bianci' },
+                    { id: 2, path: 'Steels', itemName: 'Steels' }
                 ]
             },
             {
                 id: 2,
                 name: 'Dağ Velosipedləri',
-                path: '',
+                path: 'Dağ Velosipedləri',
                 items: [
-                    { id: 1, path: '', itemName: 'Trek marlin 5' },
-                    { id: 2, path: '', itemName: 'Trinix M136' }
+                    { id: 1, path: 'Trek marlin 5', itemName: 'Trek marlin 5' },
+                    { id: 2, path: 'Trinix M136', itemName: 'Trinix M136' }
                 ]
             }
         ]
     }
+    , 
 ];

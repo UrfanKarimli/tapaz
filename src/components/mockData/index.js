@@ -3,10 +3,9 @@
 
 
 export const Ads = {
-    "Transports": {
-        "cars": {
+    "Nəqliyyat": {
+        "Avtomobillər": {
             "BMW": [
-
                 {
                     "id": 1,
                     "title": "BMW 3 Series - Sedan, Sporty Performance",
@@ -855,7 +854,7 @@ export const Ads = {
             ]
         }
         ,
-        "bikes": {
+        "Motosikletlər": {
             "Yamaha": [
                 {
                     "id": 31,
@@ -1422,8 +1421,8 @@ export const Ads = {
             ]
         }
     },
-    "Electronica" : {
-        "Phones": {
+    "Elektronika": {
+        "Telefonlar": {
             "Apple": [
                 {
                     "id": 51,
@@ -1541,7 +1540,7 @@ export const Ads = {
                 }
             ]
         },
-        "Computers": {
+        "Kompüterlər": {
             "Dell": [
                 {
                     "id": 71,
@@ -1658,6 +1657,319 @@ export const Ads = {
                     "is_new": true
                 }
             ]
+        }
+    },
+    "Xidmətlər": {
+        "Təmir": {
+            "Avtomobil təmiri": [
+                {
+                    "id": 9999299,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ],
+            "Ev təmiri": [
+                {
+                    "id": 9999599,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ]
+        },
+        "Təhsil": {
+            "Dərslər": [
+                {
+                    "id": 9999899,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ],
+            "Təlimlər": [
+                {
+                    "id": 9899999,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ]
+        }
+    }
+    ,
+    "Biznes": {
+        "Ofis Əşyaları": {
+            "Masa": [
+                {
+                    "id": 999999,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ],
+            "Stul": [
+                {
+                    "id": 999999,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ]
+        },
+        "Reklam və Marketinq": {
+            "Reklam kampaniyaları": [
+                {
+                    "id": 999999,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ],
+            "Marketinq strategiyaları": [
+                {
+                    "id": 999999,
+                    "title": "test",
+                    "price": 9999,
+                    "description": "test",
+                    "category": "test",
+                    "image": "https://global-sensors.com/wp-content/uploads/2021/07/test.jpg",
+                    "rating": {
+                        "rate": 999,
+                        "count": 99
+                    },
+                    "VIP": true,
+                    "Premium": true,
+                    "view_count": 0,
+                    "store": true,
+                    "location": "Test",
+                    "date": "0000-00-00",
+                    "brand": "test",
+                    "model": "test",
+                    "year": 2024,
+                    "color": "test",
+                    "storage_capacity": "test",
+                    "battery_life": "test",
+                    "screen_size": "test",
+                    "processor": "test",
+                    "camera": "test",
+                    "is_new": true
+                },
+            ]
+        }
+    },
+    "Şəxsi əşyalar": {
+        "Geyim": {
+            "Köynək": [],
+            "Şalvar": []
+        },
+        "Aksesuarlar": {
+            "Saat": [],
+            "Eynək": []
+        }
+    },
+    "Hobbi və Asudə": {
+        "İdman": {
+            "Futbol Topu": [],
+            "Boks Əlcəyi": []
+        },
+        "Əl İşləri": {
+            "Rəsm": [],
+            "Toxumalar": []
+        }
+    },
+    "Uşaq aləmi": {
+        "Oyuncaq": {
+            "Maşın": [],
+            "Lego": []
+        },
+        "Geyim": {
+            "Uşaq Geyimi": [],
+            "Ayakkabılar": []
+        }
+    },
+    "Heyvanlar": {
+        "Ev Heyvanları": {
+            "İt": [],
+            "Pişik": []
+        },
+        "Təsərüfat Heyvanları": {
+            "At": [],
+            "İnək": []
+        }
+    },
+    "İş elanları": {
+        "Tam Zamanlı": {
+            "Mühəndis": [],
+            "Satış Meneceri": []
+        },
+        "Qismən Zamanlı": {
+            "Ofis Köməkçisi": [],
+            "Kuryer": []
+        }
+    },
+    "Velosipedlər": {
+        "Yol Velosipedləri": {
+            "Bianci": [],
+            "Steels": []
+        },
+        "Dağ Velosipedləri": {
+            "Trek marlin 5": [],
+            "Trinix M136": []
         }
     }
 }
