@@ -1,4 +1,4 @@
-export const Katalog = [
+export const katalogData = [
     {
         id: 1,
         name: 'Nəqliyyat',

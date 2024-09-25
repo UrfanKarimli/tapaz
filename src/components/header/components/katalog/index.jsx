@@ -13,7 +13,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { SiWindows } from "react-icons/si";
-import { Katalog as katalogData } from "../../MockData/katalog";
+import { katalogData } from "@/components/header/MockData/katalog"
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 

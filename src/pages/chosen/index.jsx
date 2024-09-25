@@ -23,7 +23,7 @@ const Chosen = () => {
                     (
                         <div className="  py-24 mb-5 text-[#838383] bg-[#f6f6f5] rounded-[5px] text-base text-center">
                             <p className=" font-arial my-4">Elanlara daha sonra baxmaq üçün onları seçilmişlər siyahısına əlavə edin</p>
-                            <Link className=" w-[230px] h-[46px] inline-block text-center rounded align-top bg-[#ff4f08] text-[#fff] py-3 px-[15px] "> Bütün elanlar</Link>
+                            <Link to={'/elanlar'} className=" w-[230px] h-[46px] inline-block text-center rounded align-top bg-[#ff4f08] text-[#fff] py-3 px-[15px] "> Bütün elanlar</Link>
                         </div>
                     )
             }

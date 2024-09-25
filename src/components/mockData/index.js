@@ -1784,8 +1784,7 @@ export const Ads = {
                 },
             ]
         }
-    }
-    ,
+    },
     "Biznes": {
         "Ofis Əşyaları": {
             "Masa": [

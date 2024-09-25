@@ -1,13 +1,46 @@
 
 import { Link, useParams } from "react-router-dom"
 import FormFilter from "../form-filter"
+import { katalogData } from "@/components/header/MockData/katalog"
+import { Ads } from "@/components/mockData"
+import { useEffect, useState } from "react"
 
 
 
-
-const CategoryHead = ({Length}) => {
+const CategoryHead = ({ Length }) => {
   const { cate, subcate, items } = useParams()
+  const [keyss, setKeys] = useState([])
+  useEffect(() => {
+    const fetchData = () => {
+      const allCateKey = Object.keys(Ads);
+      // const allCate = Object.values(Ads);
+      // const final = allCate.flatMap(subObj => Object.keys(subObj))
+      // const filteredData = final.flatMap(subObj => Object.values(subObj)).flat()
 
+      if (cate) {
+        const allCateKey = Object.keys(Ads[cate]);
+        setKeys(allCateKey)
+        if (cate && subcate) {
+          const allCateKey = Object.keys(Ads[cate][subcate]);
+          setKeys(allCateKey)
+          if (cate && subcate && items) {
+            const allCate = Object.values(Ads[cate][subcate][items]);
+            const allCateKey = Object.keys(Ads[cate][subcate][items]);
+            if (cate == 'Nəqliyyat' || cate == 'Elektronika') {
+              const mapped = allCate.map(item => item.model )
+              setKeys(mapped)
+            }else {
+            setKeys(allCateKey)
+
+            }
+          }
+        }
+      } else {
+        setKeys(allCateKey)
+      }
+    };
+    fetchData();
+  }, [cate, subcate, items]);
 
 
   const getCate = (cate) => {
@@ -51,24 +84,13 @@ const CategoryHead = ({Length}) => {
         </div>
         <div className=" bg-[#fff] p-5 rounded-[7px]">
           <ul className="grid grid-cols-4 grid-rows-13 overflow-hidden">
-            <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li>
-            <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li> <li><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={'#'}>test</Link>
-              <span className="text-[#8d94ad] text-sm">(45)</span>
-            </li>
+            {
+              keyss.map((items , index) => (
+                <li className=" mb-4 leading-[18px]" key={index}><Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={`#`}>{items}</Link>
+                  <span className="text-[#8d94ad] text-sm">({keyss.length})</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
