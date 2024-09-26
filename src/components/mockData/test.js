@@ -1,4 +1,4 @@
-export const Ads = {
+export const Adsss = {
     "Transports": {
         "cars": {
             "BMW":[],

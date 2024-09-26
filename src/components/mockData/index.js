@@ -258,34 +258,6 @@ export const Ads = {
                     "mileage": 0,
                     "is_new": true
                 },
-                {
-                    "id": 10,
-                    "title": "BMW 7 Series - Luxury Sedan",
-                    "price": 90000,
-                    "description": "A luxurious sedan that redefines driving pleasure with high-end features and performance.",
-                    "category": "automobile",
-                    "image": "https://www.invygo.com/_next/image?url=https%3A%2F%2Fassets.invygo.com%2Fcar_model_images%2FModel%2520images%2FBMW%2F7%2520series%2F2023%2FTRIMS%2520_%2520SPECS%2F740i%2520sDrive%2FUntitled-5.png&w=640&q=75",
-                    "rating": {
-                        "rate": 5.0,
-                        "count": 100
-                    },
-                    "VIP": true,
-                    "Premium": true,
-                    "view_count": 0,
-                    "store": true,
-                    "location": "Zurich",
-                    "date": "2024-09-14",
-                    "brand": "BMW",
-                    "model": "7 Series",
-                    "year": 2023,
-                    "color": "Gray",
-                    "engine_capacity": "3.0L",
-                    "fuel_type": "Petrol",
-                    "transmission": "Automatic",
-                    "body_type": "Sedan",
-                    "mileage": 1000,
-                    "is_new": true
-                },
             ],
             "Mercedes": [
                 {
@@ -1789,7 +1761,7 @@ export const Ads = {
         "Ofis Əşyaları": {
             "Masa": [
                 {
-                    "id": 999999,
+                    "id": 99999754,
                     "title": "test",
                     "price": 9999,
                     "description": "test",
@@ -1819,7 +1791,7 @@ export const Ads = {
             ],
             "Stul": [
                 {
-                    "id": 999999,
+                    "id": 999999682,
                     "title": "test",
                     "price": 9999,
                     "description": "test",
@@ -1851,7 +1823,7 @@ export const Ads = {
         "Reklam və Marketinq": {
             "Reklam kampaniyaları": [
                 {
-                    "id": 999999,
+                    "id": 999925684,
                     "title": "test",
                     "price": 9999,
                     "description": "test",
@@ -1881,7 +1853,7 @@ export const Ads = {
             ],
             "Marketinq strategiyaları": [
                 {
-                    "id": 999999,
+                    "id": 999756999,
                     "title": "test",
                     "price": 9999,
                     "description": "test",
@@ -1967,6 +1939,10 @@ export const Ads = {
             "Steels": []
         },
         "Dağ Velosipedləri": {
+            "Trek marlin 5": [],
+            "Trinix M136": []
+        },
+        "Hybrid Velosipedləri": {
             "Trek marlin 5": [],
             "Trinix M136": []
         }
