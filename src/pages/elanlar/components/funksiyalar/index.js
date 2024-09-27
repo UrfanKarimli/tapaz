@@ -35,6 +35,16 @@ const getModelCounts = (modelsArray) => {
     }, {});
 };
 
+const getColors = (colorsArray) => {
+    return colorsArray?.reduce((acc, current) => {
+        const color = current.color;
+        if (!acc[color]) {
+            acc[color] = 0;
+        }
+        acc[color] += 1;
+        return acc;
+    }, {});
+};
 
 const getCate = (cate) => {
     if (cate.endsWith('lar') || cate.endsWith('lər')) {
@@ -43,4 +53,4 @@ const getCate = (cate) => {
     return cate;
   };
 
-export {getModelCounts, getPath, calculateCategoryCounts , getCate}
+export {getModelCounts, getPath, calculateCategoryCounts , getCate , getColors}

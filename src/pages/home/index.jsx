@@ -20,12 +20,11 @@ const Home = () => {
   }, []);
 
 
-  const CardDatas = filteredAds.sort(() => Math.random() - 0.5);;
   return (
     <>
       <HeadNav />
       <VipElanlar />
-      <PremiumElanlar cardDatas={CardDatas} />
+      <PremiumElanlar cardDatas={filteredAds} />
     </>
   )
 }

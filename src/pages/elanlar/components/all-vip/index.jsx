@@ -1,29 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { cardDatas } from '@/pages/home/components/mockData';
 import Card from '@/components/card';
 import { Ads } from '@/components/mockData';
+import { useEffect, useState } from 'react';
+import getFilteredData from '@/components/mockData/getFiltiredDatas';
 
 const AllVip = () => {
-    const Audi = Ads.Transports.cars.Audi
-    const Mercedes = Ads.Transports.cars.Mercedes
-    const BMW = Ads.Transports.cars.BMW
-    const cars = [...Audi, ...Mercedes, ...BMW]
-    const Yamaha = Ads.Transports.bikes.Yamaha
-    const Honda = Ads.Transports.bikes.Honda
-    const bikes = [...Yamaha, ...Honda]
-    const Transports = [...cars, ...bikes]
-    const Apple = Ads.Electronica.Phones.Apple
-    const Samsung = Ads.Electronica.Phones.Samsung
-    const MacBook = Ads.Electronica.Computers.MacBook
-    const Dell = Ads.Electronica.Computers.Dell
-    const Phones = [...Apple, ...Samsung]
-    const Computers = [...MacBook, ...Dell]
-    const Electronica = [...Phones, ...Computers]
+    const { cate, subcate, items, id } = useParams()
+    const [filteredAds, setFilteredAds] = useState([])
+  
+    useEffect(() => {
+      const fetchData = () => {
+        const data = getFilteredData({ cate, subcate, items });
+        setFilteredAds(data);
+      };
+      fetchData();
+    }, [cate, subcate, items]);
+  
 
 
-    const AllAds = [...Transports, ...Electronica, ...cardDatas]
+    const AllAds = [...filteredAds, ...cardDatas]
 
-    const vipCardDatas = AllAds.filter((item) => item.VIP === true).sort(() => Math.random() - 0.5);;
+    const vipCardDatas = AllAds.filter((item) => item.VIP === true)
 
     return (
         <section id='vip-elanlar'>

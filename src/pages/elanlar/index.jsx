@@ -22,7 +22,7 @@ const Elanlar = () => {
     CardDatas = filteredAds.filter((item) => item.model === id);
   }
   
-  CardDatas = CardDatas.sort(() => Math.random() - 0.5);
+  
   const Length = CardDatas.length;
   return (
     <>
