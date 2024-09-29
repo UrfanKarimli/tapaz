@@ -75,7 +75,7 @@ const CategoryHead = ({ Length }) => {
             </h1>
           </div>
           <div className=" pt-5 pb-[15px]">
-            <FormFilter data={data} />
+            <FormFilter  />
           </div>
         </div>
         {id ? (
