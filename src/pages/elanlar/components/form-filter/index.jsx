@@ -5,6 +5,11 @@ import {
     DropdownMenuGroup,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
 import { IoChevronDownOutline } from "react-icons/io5";
 import { GrPowerReset } from "react-icons/gr";
 import { Link, useParams, useSearchParams } from "react-router-dom"
@@ -28,10 +33,7 @@ const FormFilter = () => {
         bodyType: {},
         isnew: {},
     });
-
     const { cate, subcate, items } = useParams()
-
-
     const getPath = () => {
         if (cate && subcate) {
             return `/${cate}/${subcate}`;
@@ -64,10 +66,8 @@ const FormFilter = () => {
         }
         fetchData();
     }, [cate, subcate, items])
-    
-    const resetSearchParams = () => {
-        setSearchParams({});
-    };
+
+
     return (
         <div className=" flex justify-between ">
             <div className="flex gap-3 flex-wrap">
@@ -172,11 +172,28 @@ const FormFilter = () => {
                     />
                 </div>) : (null)}
             </div>
-            <button
-                onClick={resetSearchParams}
-                className={' w-[16%] h-10 flex justify-between items-center px-1 rounded  bg-[#dae8ff] border-[#d3e4ff] text-[#4c88f9] hover:bg-[]'} type="submit">
-                    <GrPowerReset/>
-                    Təmizlə</button>
+            <HoverCard
+                closeDelay={Number(100)}
+                openDelay={Number(100)}
+            >
+                <HoverCardTrigger className="w-[16%] h-10">
+                    <button
+                        onClick={() => {
+                            setSearchParams({})
+                        }}
+                        className={' w-full  h-10 flex justify-between items-center px-1 rounded  bg-[#dae8ff] border-[#d3e4ff] text-[#4c88f9] hover:bg-[]'} type="reset">
+                        <GrPowerReset />
+                        Təmizlə</button>
+                </HoverCardTrigger>
+                <HoverCardContent
+
+                    className={'bg-[#f1f3f7] w-52 bg-opacity-50 text-[#ff4f08]'}
+                    sideOffset={Number(1)}
+                >
+                    Təmizləmək üçün iki dəfə toxunun
+                </HoverCardContent>
+            </HoverCard>
+
         </div>
     )
 }
