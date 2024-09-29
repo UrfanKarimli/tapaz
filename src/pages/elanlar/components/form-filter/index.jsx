@@ -190,7 +190,7 @@ const FormFilter = () => {
                     className={'bg-[#f1f3f7] w-52 bg-opacity-50 text-[#ff4f08]'}
                     sideOffset={Number(1)}
                 >
-                    Təmizləmək üçün iki dəfə toxunun
+                    Məlumatlar sıfırlanacaq
                 </HoverCardContent>
             </HoverCard>
 
