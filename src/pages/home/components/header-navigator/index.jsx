@@ -79,7 +79,6 @@ const HeadNav = () => {
                             </DropdownMenu>
                         ))}
                         <div
-                            ref={katalogRef}
                             onClick={() => setIsOpen(!isOpen)}
                             className='w-[90px] group  flex-col justify-center '>
                             <div className={`${isOpen ? 'border-[#ff4f08]' : 'border-[#eaebf2]'} group-hover:border-[#ff4f08] mb-1 flex items-center justify-center bg-white p-4 border border-solid  rounded-[18%] w-[90px] h-[90px] transition-all duration-300 ease-in-out`}>
@@ -92,7 +91,7 @@ const HeadNav = () => {
                         <Link
                             className='w-[90px] group  flex-col justify-center '
                             to={'/elanlar/shop'}>
-                            <div className=' group-hover:border-[#ff4f08] mb-1 flex items-end justify-end bg-white border pr-[1px] pb-[1px] border-solid border-[#eaebf2] rounded-[18%] w-[90px] h-[90px] transition-all duration-300 ease-in-out'>
+                            <div className=' group-hover:border-[#ff4f08] mb-1 overflow-hidden flex items-end justify-end bg-white border pr-[1px] pb-[1px] border-solid border-[#eaebf2] rounded-[18%] w-[90px] h-[90px] transition-all duration-300 ease-in-out'>
                                 <img src={magaza} className='h-20 w-20 object-cover object-center' alt="" />
                             </div>
                             <span className='font-arial w-[90px]  text-center flex justify-center text-sm text-[#212c3a] group-hover:text-[#ff4f08] align-top h-[34px] transition-all duration-300 ease-in-out'>
@@ -100,20 +99,22 @@ const HeadNav = () => {
                             </span>
                         </Link>
                     </div>
-                    <div className={`bg-[#fff] p-2 rounded-[4px] ${isOpen ? 'block' : 'hidden'}`}>
+                    <div ref={katalogRef} className={`bg-[#fff] p-2 rounded-[4px] ${isOpen ? 'block' : 'hidden'}`}>
                         <ul className='grid grid-cols-4 grid-rows-13'>
                             {katalogData.map((item) => (
                                 <li className='flex flex-col p-2' key={item.id}>
                                     <Link to={`/elanlar/${item.path}`} className='text-[#4c88f9] text-sm font-semibold'>
                                         {item.name}
                                     </Link>
-                                    <div className='w-full h-[1px] bg-[#f1f3f7]'></div>
+                                    <div className='w-full h-[2px] bg-[#f1f3f7]'></div>
                                     <ul className='flex flex-col'>
                                         {item.subCategories?.map((subcat) => (
-                                            <li key={subcat.id} className='my-[7px]'>
+                                            <li key={subcat.id} className='my-[7px] flex'>
                                                 <Link to={`/elanlar/${item.path}/${subcat.path}`} className='text-[#4c88f9] text-sm'>
                                                     {subcat.name}
                                                 </Link>
+                                                <span className="text-[#8d94ad] pl-1 text-sm">{subcat.items.length}</span>
+
                                             </li>
                                         ))}
                                     </ul>
