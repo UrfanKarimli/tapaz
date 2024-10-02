@@ -1,8 +1,20 @@
+import hobbi from '@/assets/img/katalog/hobbi.png'
+import biznes from '@/assets/img/katalog/biznes.png'
+import elektronika from '@/assets/img/katalog/elektronika.png'
+import heyvan from '@/assets/img/katalog/heyvan.png'
+import iselani from '@/assets/img/katalog/is-elani.png'
+import neqliyyat from '@/assets/img/katalog/neqliyyat.png'
+import sexsiesya from '@/assets/img/katalog/sexsi-esya.png'
+import usaq from '@/assets/img/katalog/usaq.png'
+import velosiped from '@/assets/img/katalog/velosiped.png'
+import xidmetler from '@/assets/img/katalog/xidmetler.png'
+
 export const katalogData = [
     {
         id: 1,
         name: 'Nəqliyyat',
         path: 'Nəqliyyat',
+        img:neqliyyat,
         subCategories: [
             {
                 id: 1,
@@ -29,6 +41,7 @@ export const katalogData = [
         id: 2,
         name: 'Elektronika',
         path: 'Elektronika',
+        img:elektronika,
         subCategories: [
             {
                 id: 1,
@@ -54,6 +67,7 @@ export const katalogData = [
         id: 3,
         name: 'Xidmətlər',
         path: 'Xidmətlər',
+        img: xidmetler,
         subCategories: [
             {
                 id: 1,
@@ -79,6 +93,7 @@ export const katalogData = [
         id: 4,
         name: 'Biznes',
         path: 'Biznes',
+        img:biznes,
         subCategories: [
             {
                 id: 1,
@@ -104,6 +119,7 @@ export const katalogData = [
         id: 5,
         name: 'Şəxsi əşyalar',
         path: 'Şəxsi əşyalar',
+        img:sexsiesya,
         subCategories: [
             {
                 id: 1,
@@ -129,6 +145,7 @@ export const katalogData = [
         id: 6,
         name: 'Hobbi və Asudə',
         path: 'Hobbi və Asudə',
+        img: hobbi,
         subCategories: [
             {
                 id: 1,
@@ -154,6 +171,7 @@ export const katalogData = [
         id: 7,
         name: 'Uşaq aləmi',
         path: 'Uşaq aləmi',
+        img:usaq,
         subCategories: [
             {
                 id: 1,
@@ -179,6 +197,7 @@ export const katalogData = [
         id: 8,
         name: 'Heyvanlar',
         path: 'Heyvanlar',
+        img: heyvan,
         subCategories: [
             {
                 id: 1,
@@ -204,6 +223,7 @@ export const katalogData = [
         id: 9,
         name: 'İş elanları',
         path: 'İş elanları',
+        img: iselani,
         subCategories: [
             {
                 id: 1,
@@ -229,6 +249,7 @@ export const katalogData = [
         id: 10,
         name: 'Velosipedlər',
         path: 'Velosipedlər',
+        img: velosiped,
         subCategories: [
             {
                 id: 1,
@@ -249,6 +270,5 @@ export const katalogData = [
                 ]
             }
         ]
-    }
-    , 
+    },
 ];

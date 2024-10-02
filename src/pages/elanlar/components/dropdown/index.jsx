@@ -14,8 +14,6 @@ const DropDownSelect = ({ Name, MapData, IfElse, dynamicKey }) => {
     const [isOpen, setIsOpen] = useState(false); 
 
     const Param = searchParams.get(`${dynamicKey}`);
-    console.log(Param);
-
     const handleSelect = (value) => {
         setSearchParams({ ...Object.fromEntries(searchParams.entries()), [dynamicKey]: value });
         setIsOpen(false); 

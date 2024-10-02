@@ -19,13 +19,13 @@ import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Katalog = () => {
-    const [isOpen, setIsOpen] = useState(false); 
+    const [isOpen, setIsOpen] = useState(false);
     const handleMenuToggle = () => {
-        setIsOpen(prev => !prev); 
+        setIsOpen(prev => !prev);
     };
 
     const handleLinkClick = () => {
-        setIsOpen(false); 
+        setIsOpen(false);
     };
 
     return (
@@ -46,12 +46,17 @@ const Katalog = () => {
                 <DropdownMenuGroup>
                     {katalogData?.map((category) => (
                         <DropdownMenuSub key={category.id}>
-                            <Link to={`/elanlar/${category.path}`} >
-                                <DropdownMenuSubTrigger>
+                            <Link to={`/elanlar/${category.path}`}
+                                onClick={() => {
+                                    if (!category.subCategories) {
+                                        handleLinkClick()
+                                    }
+                                }} >
+                                <DropdownMenuSubTrigger className={!category.subCategories ? ` [&>svg]:hidden` : ""}>
                                     {category.name}
                                 </DropdownMenuSubTrigger>
                             </Link>
-                            <DropdownMenuPortal>
+                            {category?.subCategories ? (<DropdownMenuPortal>
                                 <DropdownMenuSubContent>
                                     {category?.subCategories?.map((subCategory) => (
                                         <DropdownMenuSub key={subCategory.id}>
@@ -75,12 +80,13 @@ const Katalog = () => {
                                         </DropdownMenuSub>
                                     ))}
                                 </DropdownMenuSubContent>
-                            </DropdownMenuPortal>
+                            </DropdownMenuPortal>) : (null)}
                         </DropdownMenuSub>
                     ))}
-                    <DropdownMenuSub key={12}>
-                        <Link to={`/elanlar/shop`} onClick={handleLinkClick}>
-                            <DropdownMenuSubTrigger className={'[&>svg]:hidden'}>
+                    <DropdownMenuSub >
+                        <Link to={`/elanlar/shop`}
+                        >
+                            <DropdownMenuSubTrigger className={` [&>svg]:hidden`}>
                                 Mağazalar
                             </DropdownMenuSubTrigger>
                         </Link>
@@ -90,5 +96,6 @@ const Katalog = () => {
         </DropdownMenu>
     );
 };
+
 
 export default Katalog;
