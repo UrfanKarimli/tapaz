@@ -44,7 +44,7 @@ const Header = () => {
                     </Link>
                     <Katalog />
                     <Filter />
-                    <Link className=' truncate rounded-[7px] h-10 bg-[#7ed321] text-white cursor-pointer flex gap-1 items-center py-3 px-4'>
+                    <Link to={'/elanlar/new'} className=' truncate rounded-[7px] h-10 bg-[#7ed321] text-white cursor-pointer flex gap-1 items-center py-3 px-4'>
                         <span> <BsPlusCircle className='h-4 w-4' /></span>
                         Yeni elan
                     </Link>
