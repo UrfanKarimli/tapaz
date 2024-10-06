@@ -1884,7 +1884,7 @@ export const Ads = {
         }
     },
     "Şəxsi əşyalar": {
-        "Geyim": {
+        "Paltar": {
             "Köynək": [],
             "Şalvar": []
         },

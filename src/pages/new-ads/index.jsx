@@ -41,7 +41,7 @@ const NewAds = () => {
                                                             <SelectLabel className={' text-base pl-2'}>{item.name}</SelectLabel>
                                                             {
                                                                 item.subCategories?.map((cate) => (
-                                                                    <SelectItem value={cate.name}>{cate.name}</SelectItem>
+                                                                    <SelectItem key={cate.id} value={cate.name}>{cate.name}</SelectItem>
                                                                 ))
                                                             }
                                                         </div>
@@ -109,7 +109,7 @@ const NewAds = () => {
                                             <SelectContent>
                                                 <SelectGroup className=" ">
                                                     <SelectItem value='Zənglər və mesajlar'>Zənglər və mesajlar</SelectItem>
-                                                    <SelectItem value='Ancaq mesajlar'>Ancaq mesajlar</SelectItem>
+                                                    <SelectItem value='Ancaq zənglər'>Ancaq zənglər</SelectItem>
                                                     <SelectItem value='Ancaq mesajlar'>Ancaq mesajlar</SelectItem>
                                                 </SelectGroup>
                                             </SelectContent>

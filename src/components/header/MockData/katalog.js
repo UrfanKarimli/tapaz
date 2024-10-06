@@ -123,8 +123,8 @@ export const katalogData = [
         subCategories: [
             {
                 id: 1,
-                name: 'Geyim',
-                path: 'Geyim',
+                name: 'Paltar',
+                path: 'Paltar',
                 items: [
                     { id: 1, path: 'Köynək', itemName: 'Köynək' },
                     { id: 2, path: 'Şalvar', itemName: 'Şalvar' }
