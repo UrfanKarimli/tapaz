@@ -7,6 +7,7 @@ import Elanlar from "./pages/elanlar";
 import AllVip from "./pages/elanlar/components/all-vip";
 import Shops from "./pages/shop";
 import NewAds from "./pages/new-ads";
+import Detallar from "./pages/detallar";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
                 <Route path="/elanlar/vip" element={<AllVip/>}/>
                 <Route path="/elanlar/shop" element={<Shops/>}/>
                 <Route path="/elanlar/new" element={<NewAds/>}/>
+                <Route path="/elanlar/detallar/:category?/:id?" element={<Detallar/>}/>
             </Route>
             
         </Route>,
