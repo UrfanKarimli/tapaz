@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Card from '@/components/card';
 
 const VipAds = ({ cardDatas }) => {
-    const vipCardDatas = cardDatas.filter((item) => item.VIP === true).slice(0, 7);;
+    const vipCardDatas = cardDatas.filter((item) => item.VIP === true).slice(0, 7);
 
     return (
         <section id='vip-elanlar ' className='mb-6'>

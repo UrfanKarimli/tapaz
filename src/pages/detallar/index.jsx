@@ -122,7 +122,6 @@ const Detallar = () => {
                                             <span className=' text-[#98918a]'>Yürüş, km</span>
                                             <span className=' text-[#2f1f19]'> {item.mileage}</span>
                                         </div>
-
                                     </div>
                                 </article>
                                 <article className=' py-8 border-t border-t-[#eae5e1]'>

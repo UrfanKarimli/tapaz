@@ -176,7 +176,7 @@ const FormFilter = () => {
                 closeDelay={Number(100)}
                 openDelay={Number(100)}
             >
-                <HoverCardTrigger className="w-[16%] h-10">
+                <HoverCardTrigger className="w-[94px] h-10">
                     <button
                         onClick={() => {
                             setSearchParams({})

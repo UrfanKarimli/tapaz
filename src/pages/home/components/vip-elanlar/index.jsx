@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { cardDatas } from '../mockData'; 
 import Card from '@/components/card';
 
-const VipElanlar = () => {
-  const vipCardDatas = cardDatas.filter((item) => item.VIP === true);
+const VipElanlar = ({ cardDatas }) => {
+  const vipCardDatas = cardDatas.filter((item) => item.VIP === true).slice(0, 12);;
+
 
   return (
     <section id='vip-elanlar ' className='mb-6'>

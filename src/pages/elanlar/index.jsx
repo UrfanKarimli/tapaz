@@ -6,8 +6,8 @@ import { useParams } from 'react-router-dom';
 import getFilteredData from '@/components/mockData/getFiltiredDatas';
 
 const Elanlar = () => {
-  const { cate, subcate, items, id } = useParams()
-  const [filteredAds, setFilteredAds] = useState([])
+  const { cate, subcate, items, id } = useParams();
+  const [filteredAds, setFilteredAds] = useState([]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -18,19 +18,26 @@ const Elanlar = () => {
   }, [cate, subcate, items]);
 
   let CardDatas = filteredAds;
+
   if (id) {
     CardDatas = filteredAds.filter((item) => item.model === id);
   }
-  
-  
+
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  CardDatas = shuffleArray(CardDatas);
+
   const Length = CardDatas.length;
+
   return (
     <>
       <CategoryHead Length={Length} />
       <VipAds cardDatas={CardDatas} />
       <AllAds CardDatas={CardDatas} />
     </>
-  )
+  );
 }
 
-export default Elanlar
+export default Elanlar;

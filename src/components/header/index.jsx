@@ -39,7 +39,7 @@ const Header = () => {
                             </li>
                             <li><Link to={'/help/popular_questions'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
                             <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li>
-                            <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
+                            <li><Link to={'/messages/all'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
                             <li><Link to={'/chosen'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-2'> <FaHeart />Seçilmişlər <sup className=' text-[#ff4f08] text-[12px] font-bold'>{likedData.length}</sup></Link></li>
                             <li>
                                 {currentUser ? <Profile name={currentUser} /> : <Auth />}

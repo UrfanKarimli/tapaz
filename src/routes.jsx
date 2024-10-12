@@ -8,6 +8,7 @@ import AllVip from "./pages/elanlar/components/all-vip";
 import Shops from "./pages/shop";
 import NewAds from "./pages/new-ads";
 import Detallar from "./pages/detallar";
+import Messages from "./pages/messages";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
                 <Route index element={<Home />} />
                 <Route path="/help/:type?/:id?" element={<Help/>} />
                 <Route path="/chosen" element={<Chosen/>}/>
+                <Route path="/messages/:type?" element={<Messages/>}/>
                 <Route path="/elanlar/:cate?/:subcate?/:items?/:id?" element={<Elanlar/>}/>
                 <Route path="/elanlar/vip" element={<AllVip/>}/>
                 <Route path="/elanlar/shop" element={<Shops/>}/>
