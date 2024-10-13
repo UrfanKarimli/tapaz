@@ -35,10 +35,13 @@ const Header = () => {
                     <div className="right">
                         <ul className='flex items-center gap-5'>
                             <li>
-                                <a href="#" className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center group gap-1' ><FaPhoneAlt /> <span className='text-black group-hover:text-[#ff4f08]'>(050) 756-41-77</span></a>
+                                <a href="https://wa.me/994997564177" target="_blank" rel="noopener noreferrer" className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center group gap-1'>
+                                <FaPhoneAlt />
+                                <span className='text-black group-hover:text-[#ff4f08]'>(099) 756-41-77</span>
+                            </a>
                             </li>
                             <li><Link to={'/help/popular_questions'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>Yardım</Link></li>
-                            <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li>
+                            {/* <li><Link className='text-[#8d94ad] leading-7 hover:text-[#ff4f08]'>RU</Link></li> */}
                             <li><Link to={'/messages/all'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-1'> <AiFillMessage />Mesajlar</Link></li>
                             <li><Link to={'/chosen'} className='text-[#8d94ad] leading-7 hover:text-[#ff4f08] flex items-center gap-2'> <FaHeart />Seçilmişlər <sup className=' text-[#ff4f08] text-[12px] font-bold'>{likedData.length}</sup></Link></li>
                             <li>

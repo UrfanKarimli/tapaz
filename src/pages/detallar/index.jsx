@@ -8,8 +8,7 @@ import { useLikedAd } from '@/services/stores/useLikedAd'
 import { PiHeartStraightDuotone, PiHeartStraightFill } from 'react-icons/pi'
 import getFilteredData from '@/components/mockData/getFiltiredDatas'
 import Report from './components/report'
-import switchCate from './components/get-category'
-
+import Proporties from './components/proporties'
 const Detallar = () => {
     const { category, id } = useParams()
     const { likedData, setLikedData } = useLikedAd();
@@ -34,6 +33,7 @@ const Detallar = () => {
     console.log('item', item)
 
 
+
     return (
         <>
             {item ? (
@@ -44,14 +44,19 @@ const Detallar = () => {
                                 <div className=" ">
                                     <Link to={'/elanlar'} className=" p-[10px] pl-0 text-[#212c3a] text-sm transition-all ease-in duration-200 hover:text-[#fe6168]" >Bütün kateqoriyalar</Link>
                                 </div>
-                                {switchCate(category)}
+                                <div className="relative before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:content-[''] before:rounded-[50%] before:h-1 before:w-1 before:bg-[#212c3a]">
+                                    <Link to={`/elanlar/${item.category}`} className=" p-[10px] text-[#212c3a] text-sm transition-all ease-in duration-200 hover:text-[#fe6168]" >{item.category}</Link>
+                                </div>
+                                <div className="relative before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:content-[''] before:rounded-[50%] before:h-1 before:w-1 before:bg-[#212c3a]">
+                                    <Link to={`/elanlar/${item.category}/${item.subcategory}`} className=" p-[10px] text-[#212c3a] text-sm transition-all ease-in duration-200 hover:text-[#fe6168]" >{item.subcategory}</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="container">
                         <div className=' flex justify-between'>
                             <div className=' flex my-4 text-[#212c3a] text-[22px] font-bold leading-normal'>
-                                <span>{item.title} , {item.year} il</span>
+                                <span>{item.title} , {item.year ? item.year + " il": "" } </span>
                             </div>
                             <div className='flex items-center gap-5'>
                                 <button
@@ -74,55 +79,14 @@ const Detallar = () => {
                         <div className='  flex justify-between'>
                             <div className="left w-[66%]">
                                 <article>
-                                    <div className="img h-[480px]">
-                                        <div>
+                                    <div className="img h-[480px] overflow-hidden">
+                                        <div className=" w-full h-full object-cover object-center">
                                             <img className=" w-full h-full object-cover object-center" src={item.image} alt="" />
                                         </div>
                                     </div>
                                 </article>
                                 <article className=' py-8'>
-                                    <div className=' grid grid-cols-2 '>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Şəhər</span>
-                                            <span className=' text-[#2f1f19]'> {item.location}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Yanacaq növü</span>
-                                            <span className=' text-[#2f1f19]'> {item.fuel_type}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Marka</span>
-                                            <span className=' text-[#2f1f19]'> {item.brand}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Sürətlər qutusu</span>
-                                            <span className=' text-[#2f1f19]'> {item.transmission}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Model</span>
-                                            <span className=' text-[#2f1f19]'> {item.model}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Kuzov növü</span>
-                                            <span className=' text-[#2f1f19]'> {item.body_type}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Rəng</span>
-                                            <span className=' text-[#2f1f19]'> {item.color}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Buraxılış ili</span>
-                                            <span className=' text-[#2f1f19]'> {item.year}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Mühərrik </span>
-                                            <span className=' text-[#2f1f19]'> {item.engine_capacity}</span>
-                                        </div>
-                                        <div className=' grid grid-cols-[150px_150px] gap-x-[10px] mb-[10px] leading-[18px] text-[15px] font-normal'>
-                                            <span className=' text-[#98918a]'>Yürüş, km</span>
-                                            <span className=' text-[#2f1f19]'> {item.mileage}</span>
-                                        </div>
-                                    </div>
+                                    <Proporties item={item}/>
                                 </article>
                                 <article className=' py-8 border-t border-t-[#eae5e1]'>
                                     <div className=' text-[#2f1f19] text-[15px]'>

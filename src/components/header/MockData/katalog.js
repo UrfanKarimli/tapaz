@@ -14,7 +14,7 @@ export const katalogData = [
         id: 1,
         name: 'Nəqliyyat',
         path: 'Nəqliyyat',
-        img:neqliyyat,
+        img: neqliyyat,
         subCategories: [
             {
                 id: 1,
@@ -41,7 +41,7 @@ export const katalogData = [
         id: 2,
         name: 'Elektronika',
         path: 'Elektronika',
-        img:elektronika,
+        img: elektronika,
         subCategories: [
             {
                 id: 1,
@@ -57,8 +57,8 @@ export const katalogData = [
                 name: 'Kompüterlər',
                 path: 'Kompüterlər',
                 items: [
-                    { id: 1,path: 'MacBook', itemName: 'MacBook' },
-                    { id: 2,path: 'Dell', itemName: 'Dell' }
+                    { id: 1, path: 'MacBook', itemName: 'MacBook' },
+                    { id: 2, path: 'Dell', itemName: 'Dell' }
                 ]
             }
         ]
@@ -93,7 +93,7 @@ export const katalogData = [
         id: 4,
         name: 'Biznes',
         path: 'Biznes',
-        img:biznes,
+        img: biznes,
         subCategories: [
             {
                 id: 1,
@@ -119,7 +119,7 @@ export const katalogData = [
         id: 5,
         name: 'Şəxsi əşyalar',
         path: 'Şəxsi əşyalar',
-        img:sexsiesya,
+        img: sexsiesya,
         subCategories: [
             {
                 id: 1,
@@ -171,14 +171,14 @@ export const katalogData = [
         id: 7,
         name: 'Uşaq aləmi',
         path: 'Uşaq aləmi',
-        img:usaq,
+        img: usaq,
         subCategories: [
             {
                 id: 1,
                 name: 'Oyuncaq',
                 path: 'Oyuncaq',
                 items: [
-                    { id: 1, path: 'Maşın',  itemName: 'Maşın' },
+                    { id: 1, path: 'Maşın', itemName: 'Maşın' },
                     { id: 2, path: 'Lego', itemName: 'Lego' }
                 ]
             },
@@ -236,8 +236,8 @@ export const katalogData = [
             },
             {
                 id: 2,
-                name: 'Qismən Zamanlı',
-                path: 'Qismən Zamanlı',
+                name: 'Yarı Zamanlı',
+                path: 'Yarı Zamanlı',
                 items: [
                     { id: 1, path: 'Ofis Köməkçisi', itemName: 'Ofis Köməkçisi' },
                     { id: 2, path: 'Kuryer', itemName: 'Kuryer' }
@@ -256,8 +256,8 @@ export const katalogData = [
                 name: 'Yol Velosipedləri',
                 path: 'Yol Velosipedləri',
                 items: [
-                    { id: 1, path: 'Bianci', itemName: 'Bianci' },
-                    { id: 2, path: 'Steels', itemName: 'Steels' }
+                    { id: 1, path: 'Bianchi', itemName: 'Bianchi' },
+                    { id: 2, path: 'Cannondale', itemName: 'Cannondale' }
                 ]
             },
             {
@@ -265,8 +265,8 @@ export const katalogData = [
                 name: 'Dağ Velosipedləri',
                 path: 'Dağ Velosipedləri',
                 items: [
-                    { id: 1, path: 'Trek marlin 5', itemName: 'Trek marlin 5' },
-                    { id: 2, path: 'Trinix M136', itemName: 'Trinix M136' }
+                    { id: 1, path: 'Trek', itemName: 'Trek' },
+                    { id: 2, path: 'Santa Cruz', itemName: 'Santa Cruz' }
                 ]
             }
         ]

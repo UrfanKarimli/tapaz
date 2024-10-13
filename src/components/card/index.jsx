@@ -24,10 +24,9 @@ const Card = ({ item }) => {
     const handleLike = () => {
         setLikedData(item);
     };
-
     return (
         <div className=' relative'>
-            <Link to={`/elanlar/detallar/${item.category}/${item.id}`} target="_blank" rel="noopener noreferrer" className='relative font-arial rounded-[7px] align-top w-[228px] h-[290px] flex flex-col bg-white overflow-hidden shadow-custom-light'>
+            <Link to={`/elanlar/detallar/${item.category}/${item.subcategory}/${item.id}`} target="_blank" rel="noopener noreferrer" className='relative font-arial rounded-[7px] align-top w-[228px] h-[290px] flex flex-col bg-white overflow-hidden shadow-custom-light'>
                 <div className="img-box relative w-[228px] h-[181px] ">
                     <img src={item.image} alt="" className='object-center object-cover h-full w-full ' />
                     <span className='absolute bottom-[10px] right-[10px] flex items-center bg-white rounded'>

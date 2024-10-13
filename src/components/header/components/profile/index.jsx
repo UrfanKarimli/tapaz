@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/hover-card"
 import { FaUserCircle } from "react-icons/fa"
 import { IoIosLogOut } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -28,10 +28,16 @@ const Profile = ({ name }) => {
                 <HoverCardContent
                     align='center'
                     sideOffset={Number(1)}
+                    className={' w-52'}
                 >
-                    <div className=" flex flex-col gap-1 ">
+                    <div className=" flex flex-col gap-1 mt-3 ">
+                        <div>
+                            <Link to={'/chosen'}
+                             className=" cursor-pointer leading-[16px] text-base p-2 rounded-sm hover:bg-[#fdfdfd] hover:text-[#ff4f08] flex items-center gap-3 "
+                            >Seçilmişlər</Link>
+                        </div>
                         <div
-                            className=" cursor-pointer leading-[16px] text-base hover:text-[#ff4f08] flex items-center gap-3 "
+                            className=" justify-between cursor-pointer leading-[16px] text-base p-2 rounded-sm hover:bg-[#fdfdfd] hover:text-[#ff4f08] flex items-center gap-3 "
                             onClick={() => {
                                 lougOut()
                             }}

@@ -69,3 +69,4 @@ export const Rayonlar = [
     { id: 68, name: "Zərdab" }
   ];
   
+  
