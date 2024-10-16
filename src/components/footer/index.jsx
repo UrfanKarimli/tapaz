@@ -6,7 +6,7 @@ import { Rayonlar } from '../header/MockData/options';
 
 const Footer = () => {
     return (
-        <footer className='flex flex-col '>
+        <footer className='flex flex-col mt-5 '>
             <div className="sosials bg-[#f6f7fa] border-y border-y-[#f1f3f7] py-3">
                 <div className="container flex items-center justify-between text-[#212c3a] py-1 text-base ">
                     <div className="help flex gap-6">

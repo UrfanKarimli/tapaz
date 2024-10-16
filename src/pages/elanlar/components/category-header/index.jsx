@@ -1,26 +1,34 @@
 
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useSearchParams } from "react-router-dom"
 import FormFilter from "../form-filter"
 import { Ads } from "@/components/mockData"
 import { useState,useEffect } from "react"
 import { getCate , getModelCounts , calculateCategoryCounts} from "../funksiyalar"
+import { useCardDatas } from "@/services/stores/useCardDatas"
 
 
 
-const CategoryHead = ({ Length }) => {
-  const { cate, subcate, items, id } = useParams()
+
+const CategoryHead = () => {
+  const { cardDatas} = useCardDatas()
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const { cate, subcate } = useParams()
   const [data, setData] = useState({})
-  const getPath = () => {        
+  const items = searchParams.get(`name`)
+  const model = searchParams.get(`model`)
+
+  const getPath = ({key}) => {        
     if (cate && subcate && items) {
-        return `/${cate}/${subcate}/${items}`;
-    }
+      return `/${cate}/${subcate}?name=${items}&model=${key}`;
+  }
     if (cate && subcate) {
-        return `/${cate}/${subcate}`;
+        return `/${cate}/${subcate}?name=${key}`;
     }
-    if (cate) {
-        return `/${cate}`;
+    if (cate ) {
+        return `/${cate}/${key}`;
     }
-    return ``;
+    return `/${key}`;
 };
   useEffect(() => {
     const fetchData = () => {
@@ -71,14 +79,14 @@ const CategoryHead = ({ Length }) => {
           </div>
           <div>
             <h1 className=" flex text-[#212c3a] font-bold text-base">{cate ? subcate ? items ? `${getCate(subcate)} elanları —  ${items}` : `${getCate(subcate)} elanları` : `${getCate(cate)} elanları  ` : `Bütün kateqoriyalar`}
-              <span className=" text-[#8d94ad] pl-1 font-normal">({Length} elan)</span>
+              <span className=" text-[#8d94ad] pl-1 font-normal">({cardDatas.length} elan)</span>
             </h1>
           </div>
           <div className=" pt-5 pb-[15px]">
             <FormFilter  />
           </div>
         </div>
-        {id ? (
+        {model ? (
           <div className=" hidden">
           </div>
         ) : (
@@ -87,7 +95,7 @@ const CategoryHead = ({ Length }) => {
               {
                 Object.entries(data)?.map(([key, value]) => (
                   <li className=" mb-4 leading-[18px]" key={key}>
-                    <Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={`/elanlar${getPath()}/${key}`}>{key}</Link>
+                    <Link className="text-[#4c88f9] text-sm hover:text-[#fe6168] mr-1" to={`/elanlar${getPath({key})}`}>{key}</Link>
                     <span className="text-[#8d94ad] text-sm">({value})</span>
                   </li>
                 ))
@@ -99,5 +107,6 @@ const CategoryHead = ({ Length }) => {
     </div>
   )
 }
+
 
 export default CategoryHead

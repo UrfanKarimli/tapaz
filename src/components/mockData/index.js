@@ -1769,7 +1769,6 @@ export const Ads = {
                     "technicians": "Sertifikatlı",
                     "warranty": true,
                     "contact_number": "+994 50 123 45 67",
-                    "is_new": true
                 },
                 {
                     "id": 92,
@@ -1794,7 +1793,6 @@ export const Ads = {
                     "technicians": "Təcrübəli",
                     "warranty": true,
                     "contact_number": "+994 55 987 65 43",
-                    "is_new": true
                 }
             ]
             ,
@@ -1822,7 +1820,6 @@ export const Ads = {
                     "technicians": "Peşəkar",
                     "warranty": true,
                     "contact_number": "+994 51 234 56 78",
-                    "is_new": true
                 },
                 {
                     "id": 94,
@@ -1847,7 +1844,6 @@ export const Ads = {
                     "technicians": "İxtisaslı",
                     "warranty": true,
                     "contact_number": "+994 55 765 43 21",
-                    "is_new": true
                 }
             ]
         },
@@ -1876,7 +1872,6 @@ export const Ads = {
                     "duration": "3 ay",
                     "teacher_qualification": "Peşəkar",
                     "contact_number": "+994 50 123 45 67",
-                    "is_new": true
                 },
                 {
                     "id": 96,
@@ -1901,7 +1896,6 @@ export const Ads = {
                     "duration": "6 ay",
                     "teacher_qualification": "Mütəxəssis",
                     "contact_number": "+994 55 234 56 78",
-                    "is_new": true
                 }
             ]
             ,
@@ -1929,7 +1923,6 @@ export const Ads = {
                     "duration": "1 ay",
                     "teacher_qualification": "Biznes mütəxəssisi",
                     "contact_number": "+994 50 987 65 43",
-                    "is_new": true
                 },
                 {
                     "id": 98,
@@ -1954,7 +1947,6 @@ export const Ads = {
                     "duration": "2 ay",
                     "teacher_qualification": "IT mütəxəssisi",
                     "contact_number": "+994 55 678 90 12",
-                    "is_new": true
                 }
             ]
         }

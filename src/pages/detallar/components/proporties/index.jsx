@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Proporties = ({ item }) => {
+
     return (
         <div className=' grid grid-cols-2 '>
             {item.location ?

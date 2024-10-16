@@ -1,7 +1,8 @@
 import Card from '@/components/card';
+import { useCardDatas } from '@/services/stores/useCardDatas';
 
-const AllAds = ({CardDatas}) => {
-
+const AllAds = () => {
+    const { cardDatas} = useCardDatas()
 
     return (
         <section id='butun-elanlar'>
@@ -12,7 +13,7 @@ const AllAds = ({CardDatas}) => {
             </div>
             <div className="container flex flex-wrap gap-3">
                 {
-                    CardDatas.map((item, index) => (
+                    cardDatas?.map((item, index) => (
                         <Card
                             item={item}
                             key={index}

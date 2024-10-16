@@ -69,7 +69,7 @@ const Katalog = () => {
                                                 <DropdownMenuSubContent>
                                                     {subCategory?.items?.map((item) => (
                                                         <DropdownMenuItem key={item.id}>
-                                                            <Link className="w-full" to={`/elanlar/${category.path}/${subCategory.path}/${item.path}`} onClick={handleLinkClick}>
+                                                            <Link className="w-full" to={`/elanlar/${category.path}/${subCategory.path}?name=${item.path}`} onClick={handleLinkClick}>
                                                                 {item.itemName}
                                                             </Link>
                                                             <DropdownMenuSeparator />

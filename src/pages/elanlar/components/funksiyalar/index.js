@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom";
-
 
 const calculateCategoryCounts = (Obj) => {
     const counts = {};
@@ -9,20 +7,7 @@ const calculateCategoryCounts = (Obj) => {
     return counts;
 };
 
-const getPath = () => {
-    const { cate, subcate, items, id } = useParams()
 
-    if (cate && subcate && items) {
-        return `/${cate}/${subcate}/${items}`;
-    }
-    if (cate && subcate) {
-        return `/${cate}/${subcate}`;
-    }
-    if (cate) {
-        return `/${cate}`;
-    }
-    return ``;
-};
 
 const getModelCounts = (arr) => {
     return arr?.reduce((acc, current) => {
@@ -95,4 +80,4 @@ const getCate = (cate) => {
     return cate;
 };
 
-export { getModelCounts, getPath, calculateCategoryCounts, getCate, getColors, getFuels, getTransmission, getBodytype , getNew }
+export { getModelCounts, calculateCategoryCounts, getCate, getColors, getFuels, getTransmission, getBodytype , getNew }

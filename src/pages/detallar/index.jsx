@@ -10,11 +10,12 @@ import getFilteredData from '@/components/mockData/getFiltiredDatas'
 import Report from './components/report'
 import Proporties from './components/proporties'
 const Detallar = () => {
-    const { category, id } = useParams()
+    const {  id } = useParams()
     const { likedData, setLikedData } = useLikedAd();
     const [isLiked, setIsLiked] = useState(false);
     const [item, setItem] = useState(null)
 
+    
     useEffect(() => {
         const data = getFilteredData({});
         const filteredItem = data?.find((i) => i.id === Number(id));
@@ -29,8 +30,7 @@ const Detallar = () => {
             setLikedData(item);
         }
     };
-
-    console.log('item', item)
+    // console.log('item', item)
 
 
 

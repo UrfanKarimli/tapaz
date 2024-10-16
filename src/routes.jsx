@@ -18,7 +18,7 @@ export const router = createBrowserRouter(
                 <Route path="/help/:type?/:id?" element={<Help/>} />
                 <Route path="/chosen" element={<Chosen/>}/>
                 <Route path="/messages/:type?" element={<Messages/>}/>
-                <Route path="/elanlar/:cate?/:subcate?/:items?/:id?" element={<Elanlar/>}/>
+                <Route path="/elanlar/:cate?/:subcate?/:id?" element={<Elanlar/>}/>
                 <Route path="/elanlar/vip" element={<AllVip/>}/>
                 <Route path="/elanlar/shop" element={<Shops/>}/>
                 <Route path="/elanlar/new" element={<NewAds/>}/>

@@ -1,27 +1,20 @@
-import { Link, useParams } from 'react-router-dom';
-import { cardDatas } from '@/pages/home/components/mockData';
+import { Link } from 'react-router-dom';
 import Card from '@/components/card';
-import { Ads } from '@/components/mockData';
 import { useEffect, useState } from 'react';
 import getFilteredData from '@/components/mockData/getFiltiredDatas';
 
 const AllVip = () => {
-    const { cate, subcate, items, id } = useParams()
     const [filteredAds, setFilteredAds] = useState([])
   
     useEffect(() => {
       const fetchData = () => {
-        const data = getFilteredData({ cate, subcate, items });
+        const data = getFilteredData({  });
         setFilteredAds(data);
       };
       fetchData();
-    }, [cate, subcate, items]);
+    }, []);
   
-
-
-    const AllAds = [...filteredAds, ...cardDatas]
-
-    const vipCardDatas = AllAds.filter((item) => item.VIP === true)
+    const vipCardDatas = filteredAds?.filter((item) => item.VIP === true)
 
     return (
         <section id='vip-elanlar'>
@@ -35,7 +28,7 @@ const AllVip = () => {
             </div>
             <div className="container flex flex-wrap gap-3">
                 {
-                    vipCardDatas.map((item) => (
+                    vipCardDatas?.map((item) => (
                         <Card
                             item={item}
                             key={item.id}

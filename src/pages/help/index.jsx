@@ -81,7 +81,7 @@ const Help = () => {
                                     onClick={() => handleLinkClick(item.id)}
                                     className=' text-[#212c3a] flex items-center h-[60px]' to={`/help/${type}/${item.id}`}>{item.text}
                                     <IoMdClose
-                                          className={`text-2xl absolute right-1 top-1/2 transform -translate-y-1/2 transition-transform duration-300 ${rotatedItem === item.id ? 'rotate-[-45deg]' : ''}`}
+                                        className={`text-2xl absolute right-1 top-1/2 transform -translate-y-1/2 transition-transform duration-300 ${rotatedItem === item.id ? 'rotate-[-45deg]' : ''}`}
                                     />
                                 </Link>
                             </div>

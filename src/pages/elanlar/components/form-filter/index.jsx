@@ -1,30 +1,25 @@
-import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import { IoChevronDownOutline } from "react-icons/io5";
 import { GrPowerReset } from "react-icons/gr";
-import { Link, useParams, useSearchParams } from "react-router-dom"
+import {  useParams, useSearchParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { Ads } from "@/components/mockData"
 import { calculateCategoryCounts, getBodytype, getColors, getFuels, getModelCounts, getNew, getTransmission } from "../funksiyalar"
 import DropDownSelect from "../dropdown"
 import MinMax from "../min-max"
-
+import getFilteredData from "@/components/mockData/getFiltiredDatas";
 
 
 const FormFilter = () => {
     const [searchParams, setSearchParams] = useSearchParams();
-
+    const [variety, setVariety] = useState()
+    const { cate, subcate } = useParams()
+    const items = searchParams.get(`name`)
     const [marka, setMarka] = useState({})
+    const data = getFilteredData({ cate, subcate });
     const [filters, setFilters] = useState({
         model: {},
         fuel: {},
@@ -33,22 +28,19 @@ const FormFilter = () => {
         bodyType: {},
         isnew: {},
     });
-    const { cate, subcate, items } = useParams()
-    const getPath = () => {
-        if (cate && subcate) {
-            return `/${cate}/${subcate}`;
-        }
-        if (cate) {
-            return `/${cate}`;
-        }
-        return ``;
-    };
 
+    useEffect(() => {
+        if (data?.length) {
+            setVariety(data[0]);
+        }
+    }, [cate, subcate]);
 
     useEffect(() => {
         const fetchData = () => {
-            if (cate && subcate && items) {
-                const allCate = Object.values(Ads[cate][subcate][items]);
+            if (cate && subcate) {
+                const allCate = getFilteredData({ cate, subcate , items  });
+                const value = calculateCategoryCounts(Ads[cate][subcate]);
+                setMarka(value)
                 setFilters(prev => ({
                     ...prev,
                     model: getModelCounts(allCate),
@@ -58,119 +50,83 @@ const FormFilter = () => {
                     bodyType: getBodytype(allCate),
                     isnew: getNew(allCate)
                 }));
-            } else
-                if (cate && subcate) {
-                    const value = calculateCategoryCounts(Ads[cate][subcate]);
-                    setMarka(value)
-                }
+            }
         }
         fetchData();
-    }, [cate, subcate, items])
-
+    }, [cate, subcate ,items])
 
     return (
         <div className=" flex justify-between ">
             <div className="flex gap-3 flex-wrap">
                 <div className="qiymet">
-                    <MinMax buttonName={'Qiymət, AZN'} />
+                    <MinMax
+                        Seen={true}
+                        buttonName={'Qiymət, AZN'} />
                 </div>
-                {subcate ? (<div className="marka">
-                    {/* <DropDownSelect
-                                Param={items}
-                                Name={"Marka"}
-                                MapData={marka}
-                                IfElse={subcate}
-                                dynamicKey={'color'}
-                            /> */}
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button className={'text-[#939292] px-[10px] rounded hover:bg-white hover:text-[] [&>svg]:data-[state=open]:rotate-180 cursor-pointer  text-base border border-[#f1f3f7] focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0'} variant="outline"
-                            >{items ? items : 'Marka'}
-                                <IoChevronDownOutline className=" ml-2 text-[24px] text-[#ff4f08] " />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent
-                            sideOffset={Number(1)}
-                            align="start"
-                            className="">
-                            <DropdownMenuGroup
-                                className="PopoverContent flex items-center justify-between"
-                            >
-                                <ul className=" flex flex-col flex-wrap max-h-96 gap-1 overflow-hidden">
-                                    {subcate ?
-                                        Object.entries(marka)?.map(([key, value]) => (
-                                            <li className=" px-[10px]" key={key}>
-                                                <Link className="text-[#344049] text-base  mr-1" to={`/elanlar${getPath()}/${key}`}>{key}</Link>
-                                            </li>
-                                        )) : (null)
-                                    }
-                                </ul>
-                            </DropdownMenuGroup >
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                </div>) : (null)
-                }
-                {items ? (<div className="model">
-                    <DropDownSelect
-                        Name={"Model"}
-                        MapData={filters.model}
-                        IfElse={items}
-                        dynamicKey={'model'}
-                    />
-                </div>) : (null)
-                }
-                {subcate ? (<div className="color">
-                    <DropDownSelect
-                        Name={"Rəng"}
-                        MapData={filters.colors}
-                        IfElse={subcate}
-                        dynamicKey={'color'}
-                    />
-                </div>) : (null)}
-                {subcate ? (<div className="muherrik">
-                    <MinMax buttonName={<>
-                        Mühərrik sm<sup className="text-[10px]">3</sup>
-                    </>} />
-                </div>) : (null)}
-                {subcate ? (<div className="yanacaq">
-                    <DropDownSelect
-                        Name={"Yanacaq növü"}
-                        MapData={filters.fuel}
-                        IfElse={items}
-                        dynamicKey={'fuel_type'}
-
-                    />
-                </div>) : (null)}
-                {subcate ? (<div className="Suret qutusu">
-                    <DropDownSelect
-                        Name={"Sürətlər qutusu"}
-                        MapData={filters.transmission}
-                        IfElse={items}
-                        dynamicKey={'transmission'}
-                    />
-                </div>) : (null)}
-                {subcate ? (<div className="Kuzov novu">
-                    <DropDownSelect
-                        Name={"Kuzov növü"}
-                        MapData={filters.bodyType}
-                        IfElse={subcate}
-                        dynamicKey={'body_type'}
-                    />
-                </div>) : (null)}
-                {subcate ? (<div className="Buraxılış">
-                    <MinMax buttonName={'Buraxılış ili'} />
-                </div>) : (null)}
-                {subcate ? (<div className="Yurus">
-                    <MinMax buttonName={'Yürüş, km'} />
-                </div>) : (null)}
-                {subcate ? (<div className="isnew">
-                    <DropDownSelect
-                        Name={"Yeni?"}
-                        MapData={filters.isnew}
-                        IfElse={subcate}
-                        dynamicKey={'is_new'}
-                    />
-                </div>) : (null)}
+                <DropDownSelect
+                    Seen={subcate && variety?.brand}
+                    Name={"Marka"}
+                    MapData={marka}
+                    IfElse={subcate}
+                    dynamicKey={'name'}
+                />
+                <DropDownSelect
+                    Seen={items && variety?.model}
+                    Name={"Model"}
+                    MapData={filters.model}
+                    IfElse={items}
+                    dynamicKey={'model'}
+                />
+                <DropDownSelect
+                    Seen={subcate && variety?.color}
+                    Name={"Rəng"}
+                    MapData={filters.colors}
+                    IfElse={subcate}
+                    dynamicKey={'color'}
+                />
+                <MinMax
+                    Seen={subcate && variety?.engine_capacity}
+                    buttonName={<> Mühərrik sm<sup className="text-[10px]">3</sup> </>}
+                />
+                <DropDownSelect
+                    Seen={subcate && variety?.fuel_type}
+                    Name={"Yanacaq növü"}
+                    MapData={filters.fuel}
+                    IfElse={subcate}
+                    dynamicKey={'fuel_type'}
+                />
+                <DropDownSelect
+                    Seen={subcate && variety?.transmission}
+                    Name={"Sürətlər qutusu"}
+                    MapData={filters.transmission}
+                    IfElse={subcate}
+                    dynamicKey={'transmission'}
+                />
+                <DropDownSelect
+                    Seen={subcate && variety?.body_type}
+                    Name={"Kuzov növü"}
+                    MapData={filters.bodyType}
+                    IfElse={subcate}
+                    dynamicKey={'body_type'}
+                />
+                <MinMax
+                    Seen={subcate === 'Avtomobillər' || subcate === 'Motosikletlər'}
+                    buttonName={'Buraxılış ili'}
+                />
+                <MinMax
+                    Seen={subcate && variety?.mileage}
+                    buttonName={'Yürüş, km'}
+                />
+                <DropDownSelect
+                    Seen={subcate && variety?.is_new}
+                    Name={"Yeni?"}
+                    MapData={{
+                        "Bəli": 1,
+                        "Xeyir": 0
+                    }}
+                    IfElse={subcate}
+                    dynamicKey={'is_new'}
+                />
             </div>
             <HoverCard
                 closeDelay={Number(100)}
@@ -186,14 +142,12 @@ const FormFilter = () => {
                         Təmizlə</button>
                 </HoverCardTrigger>
                 <HoverCardContent
-
                     className={'bg-[#f1f3f7] w-52 bg-opacity-50 text-[#ff4f08]'}
                     sideOffset={Number(1)}
                 >
                     Məlumatlar sıfırlanacaq
                 </HoverCardContent>
             </HoverCard>
-
         </div>
     )
 }
