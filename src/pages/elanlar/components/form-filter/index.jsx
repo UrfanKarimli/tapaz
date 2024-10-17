@@ -60,8 +60,9 @@ const FormFilter = () => {
             <div className="flex gap-3 flex-wrap">
                 <div className="qiymet">
                     <MinMax
+                    dynamicKey={`price`}
                         Seen={true}
-                        buttonName={'Qiymət, AZN'} />
+                        Name={'Qiymət, AZN'} />
                 </div>
                 <DropDownSelect
                     Seen={subcate && variety?.brand}
@@ -85,8 +86,10 @@ const FormFilter = () => {
                     dynamicKey={'color'}
                 />
                 <MinMax
+                    dynamicKey={`engine_capacity`}
+
                     Seen={subcate && variety?.engine_capacity}
-                    buttonName={<> Mühərrik sm<sup className="text-[10px]">3</sup> </>}
+                    Name={<> Mühərrik sm<sup className="text-[10px]">3</sup> </>}
                 />
                 <DropDownSelect
                     Seen={subcate && variety?.fuel_type}
@@ -110,19 +113,21 @@ const FormFilter = () => {
                     dynamicKey={'body_type'}
                 />
                 <MinMax
+                    dynamicKey={`year`}
                     Seen={subcate === 'Avtomobillər' || subcate === 'Motosikletlər'}
-                    buttonName={'Buraxılış ili'}
+                    Name={'Buraxılış ili'}
                 />
                 <MinMax
+                    dynamicKey={`mileage`}
                     Seen={subcate && variety?.mileage}
-                    buttonName={'Yürüş, km'}
+                    Name={'Yürüş, km'}
                 />
                 <DropDownSelect
                     Seen={subcate && variety?.is_new}
                     Name={"Yeni?"}
                     MapData={{
-                        "Bəli": 1,
-                        "Xeyir": 0
+                        "true": true,
+                        "false": false
                     }}
                     IfElse={subcate}
                     dynamicKey={'is_new'}

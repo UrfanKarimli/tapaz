@@ -18,6 +18,8 @@ const Elanlar = () => {
   const transmission = searchParams.get(`transmission`);
   const body_type = searchParams.get(`body_type`);
   const is_new = searchParams.get(`is_new`);
+  const search = searchParams.get('search'); 
+  const location = searchParams.get('location');
 
   const shuffleArray = (array) => {
     return array.sort(() => Math.random() - 0.5);
@@ -32,6 +34,10 @@ const Elanlar = () => {
         (!transmission || item.transmission === transmission) &&
         (!body_type || item.body_type === body_type) &&
         (!is_new || item.is_new.toString() === is_new) 
+        &&
+        (!search || item.title === search)
+        &&
+        (!location || item.location === location)
       );
     });
   };
@@ -45,7 +51,7 @@ const Elanlar = () => {
     };
 
     fetchData();
-  }, [cate, subcate, items, model, color, fuel_type, transmission, body_type, is_new]);
+  }, [cate, subcate, items, model, color, fuel_type, transmission, body_type, is_new, location, search]);
 
   return (
     <>
