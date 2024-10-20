@@ -20,7 +20,6 @@ const DropDownSelect = ({ Seen, Name, MapData, IfElse, dynamicKey }) => {
         setSearchParams({ ...Object.fromEntries(searchParams.entries()), [dynamicKey]: value });
         setIsOpen(false);
     };
-
     const handleClear = () => {
         const newParams = new URLSearchParams(searchParams);
         newParams.delete(dynamicKey);

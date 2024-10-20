@@ -90,7 +90,7 @@ const CategoryHead = () => {
           <div className=" hidden">
           </div>
         ) : (
-          <div className=" bg-[#fff] p-5 rounded-[7px]">
+          <div className=" bg-[#fff] p-5 rounded-[7px] ">
             <ul className="grid grid-cols-4 grid-rows-13 overflow-hidden">
               {
                 Object.entries(data)?.map(([key, value]) => (

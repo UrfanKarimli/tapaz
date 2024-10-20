@@ -35,12 +35,13 @@ const Elanlar = () => {
         (!body_type || item.body_type === body_type) &&
         (!is_new || item.is_new.toString() === is_new) 
         &&
-        (!search || item.title === search)
+        (!search || item.title.toLowerCase().includes(search.toLowerCase()))
         &&
         (!location || item.location === location)
       );
     });
   };
+
 
   useEffect(() => {
     const fetchData = () => {

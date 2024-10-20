@@ -30,7 +30,7 @@ const HeadNav = () => {
     }, [katalogRef]);
 
     return (
-        <section id='head-nav'>
+        <section className='max-lg:hidden' id='head-nav '>
             <div className='bg-[#f1f3f7] py-5'>
                 <div className='container'>
                     <div className="flex flex-wrap  gap-8 ">

@@ -9,11 +9,13 @@ import usaq from '@/assets/img/katalog/usaq.png'
 import velosiped from '@/assets/img/katalog/velosiped.png'
 import xidmetler from '@/assets/img/katalog/xidmetler.png'
 
+
 export const katalogData = [
     {
         id: 1,
         name: 'Nəqliyyat',
         path: 'Nəqliyyat',
+        description: 'Tap.az avtomobil almaq və ya satmaq istəyənləri bir araya gətirir. Yeni və sürülmüş nəqliyyat vasitələrini, avtomobillər üçün ehtiyat hissə və aksesuarları əla qiymətlərlə alın və ya satın.',
         img: neqliyyat,
         subCategories: [
             {
@@ -41,6 +43,7 @@ export const katalogData = [
         id: 2,
         name: 'Elektronika',
         path: 'Elektronika',
+        description: 'Tap.az telefonlar və planşetlərdən çeşidli aksesuarlara qədər hər növ yeni və işlənmiş elektronika məhsulları üzrə çox sərfəli təkliflərin ünvanıdır – həm alıcılar, həm də satıcılar üçün sərfəli.',
         img: elektronika,
         subCategories: [
             {
@@ -67,6 +70,7 @@ export const katalogData = [
         id: 3,
         name: 'Xidmətlər',
         path: 'Xidmətlər',
+        description: 'Tap.az-da təqdim olunan çoxsaylı xidmətlərdən (elektrik, fotoqraf, repetitor və s.) yararlana və ya mütəxəssisi olduğunuz sahə üzrə xidmətlərinizi təklif edərək davamlı qazanc əldə edə bilərsiniz.',
         img: xidmetler,
         subCategories: [
             {
@@ -93,6 +97,7 @@ export const katalogData = [
         id: 4,
         name: 'Biznes',
         path: 'Biznes',
+        description: 'Tap.az-da biznes xidmətləri – Maliyyə, mühasibatlıq, hüquqi dəstək və marketinq sahələrində peşəkar həllər. Biznesinizi inkişaf etdirmək üçün etibarlı tərəfdaş',
         img: biznes,
         subCategories: [
             {
@@ -119,6 +124,7 @@ export const katalogData = [
         id: 5,
         name: 'Şəxsi əşyalar',
         path: 'Şəxsi əşyalar',
+        description: 'Tap.az istifadəçiləri burada yeni və işlənmiş geyimlərini, aksesuarlarını və digər əşyalarını sataraq gəlir əldə edir, həmçinin itirdikləri və ya tapdıqları əşyalar barədə elanlar yerləşdirir.',
         img: sexsiesya,
         subCategories: [
             {
@@ -145,6 +151,7 @@ export const katalogData = [
         id: 6,
         name: 'Hobbi və Asudə',
         path: 'Hobbi və Asudə',
+        description: 'Asudə vaxtınızda məşğul olmaq üçün maraqlı hobbi axtarırsınız? Yaxın həftələrdə səyahətə çıxmaq istəyirsiniz? Bəs ürəyinizə yatan bir insanla tanış olmaq necə? Elədirsə, bura tam sizlikdir.',
         img: hobbi,
         subCategories: [
             {
@@ -171,6 +178,7 @@ export const katalogData = [
         id: 7,
         name: 'Uşaq aləmi',
         path: 'Uşaq aləmi',
+        description: 'Tap.az-da hər yaşda uşaqlar üçün axtardığınız əşyaları (oyuncaqlar, geyim, usaq belekleri və s.) tapa və ya sata bilərsiniz. Məhsullar olduqca sərfəli qiymətə təqdim olunur və qısa müddətdə alıcı tapır.',
         img: usaq,
         subCategories: [
             {
@@ -197,6 +205,7 @@ export const katalogData = [
         id: 8,
         name: 'Heyvanlar',
         path: 'Heyvanlar',
+        description: 'Tap.az müxtəlif heyvanlar üçün yeni sahib tapmaqda və ya onlara sahiblənməkdə sizə yardımçı olacaq. Burada axtardığınız heyvan növlərini, onlar üçün müxtəlif qida, əşya və oyuncaqları tapa bilərsiniz.',
         img: heyvan,
         subCategories: [
             {
@@ -223,6 +232,7 @@ export const katalogData = [
         id: 9,
         name: 'İş elanları',
         path: 'İş elanları',
+        description: 'Tap.az hər zaman olduğu kimi iş var və ya is axtariram deyənlərin işini asanlaşdırır. Yeni is elanlari 2022 mövsümü üzrə daim yenilənir, yüzlərlə şəxs isə qısa zamanda axtardığı vakansiyalar üzrə iş tapır.',
         img: iselani,
         subCategories: [
             {
@@ -249,6 +259,7 @@ export const katalogData = [
         id: 10,
         name: 'Velosipedlər',
         path: 'Velosipedlər',
+        description: 'Tap.az-da velosipedlər – Şəhər, dağ və idman velosipedləri. Müxtəlif modellər və sərfəli qiymətlərlə rahat və sürətli seçimlər!',
         img: velosiped,
         subCategories: [
             {
