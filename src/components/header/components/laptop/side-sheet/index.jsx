@@ -8,9 +8,12 @@ import {
 } from "@/components/ui/sheet"
 import allCat from '@/assets/img/all-categories.png'
 import { katalogData } from '@/components/header/MockData/katalog'
-
+import Subkatalog from "../subkatalog"
+import { useSubkatalog } from "@/services/stores/useSubkatalog"
 
 const SideSheet = () => {
+    const { setSubDatas,setOpen } = useSubkatalog()
+
     return (
         <div>
             <Sheet>
@@ -29,16 +32,20 @@ const SideSheet = () => {
                         </div>
                     </div>
                 </SheetTrigger>
-                <SheetContent className={` w-5/6 sm:max-w-5/6`}>
+                <SheetContent className={` w-5/6 sm:max-w-5/6 hover:[&>button]:text-[#ff4f08]`}>
                     <SheetHeader>
                         <SheetTitle className={' flex items-center justify-center'}>Kataloq</SheetTitle>
                         <SheetDescription className={''}>
                         </SheetDescription>
                     </SheetHeader>
-                    <div className=" h-screen flex flex-col  overflow-scroll ">
+                    <div className=" h-screen flex flex-col overflow-y-scroll no-scrollbar ">
                         {katalogData?.map((item) => (
                             <div
-                                key={item.id} className=" py-2 flex gap-4 text-[#212c3a] border-b  ">
+                            onClick={()=> {
+                                setOpen(true)
+                                setSubDatas(item)
+                            }}
+                                key={item.id} className=" py-2 flex gap-4 text-[#212c3a] border-b  cursor-pointer ">
                                 <div className=' flex-none basis-10   mb-1 flex items-center justify-center bg-[#f6f7fa]   rounded  '>
                                     <img src={item.img} className=' object-contain' alt="" />
                                 </div>
@@ -51,6 +58,7 @@ const SideSheet = () => {
                     </div>
                 </SheetContent>
             </Sheet>
+            <Subkatalog/>
         </div>
     )
 }

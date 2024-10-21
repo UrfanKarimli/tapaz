@@ -20,8 +20,8 @@ module.exports = {
       'max-2xl': { 'max': '1280px' },
       "sm": "640px",
       "md": "768px",
-      "lg": "950px",
-      "xl": "1024px", 
+      "lg": "951px",
+      "xl": "1024px",
       "2xl": "1280px",
     },
     fontFamily: {
@@ -36,12 +36,13 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        "sm": "640px",
-        "md": "768px",
-        "lg": "950px",
-        
+        'max-sm': { 'max': '639px' },
+        'max-md': { 'max': '767px' },
+        'max-lg': { 'max': '949px' },
+        "lg": "951px",
       },
     },
+
     extend: {
       boxShadow: {
         'custom-light': '0 17px 34px 0 rgba(44,39,56,0.04), 0 8px 17px 0 rgba(44,39,56,0.02)',

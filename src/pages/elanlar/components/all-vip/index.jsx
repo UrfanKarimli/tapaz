@@ -18,7 +18,7 @@ const AllVip = () => {
 
     return (
         <section id='vip-elanlar'>
-            <div className=" ">
+            <div className=" max-lg:px-4 ">
                 <p className='flex items-center justify-center mt-8 mb-6 ' >
                     <Link className='text-[#ff6617] text-[22px] font-bold'>Bütün VIP elanlar</Link>
                 </p>
@@ -26,7 +26,7 @@ const AllVip = () => {
                     {vipCardDatas.length} elan tapıldı
                 </div>
             </div>
-            <div className="container flex flex-wrap gap-3">
+            <div className="container flex flex-wrap gap-[1.26%] max-lg:px-4">
                 {
                     vipCardDatas?.map((item) => (
                         <Card
