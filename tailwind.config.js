@@ -13,11 +13,13 @@ module.exports = {
       'tablet': '640px',
       'laptop': '1024px',
       'desktop': '1280px',
+      'max-of': { 'max': '349px' },
       'max-sm': { 'max': '639px' },
       'max-md': { 'max': '767px' },
       'max-lg': { 'max': '949px' },
       'max-xl': { 'max': '1023px' },
       'max-2xl': { 'max': '1280px' },
+      "of": "350px",
       "sm": "640px",
       "md": "768px",
       "lg": "951px",
@@ -36,6 +38,7 @@ module.exports = {
     container: {
       center: true,
       screens: {
+        'max-of': { 'max': '349px' },
         'max-sm': { 'max': '639px' },
         'max-md': { 'max': '767px' },
         'max-lg': { 'max': '949px' },

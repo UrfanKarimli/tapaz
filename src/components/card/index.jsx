@@ -25,7 +25,7 @@ const Card = ({ item }) => {
         setLikedData(item);
     };
     return (
-        <div className=' block relative w-[49%] md:w-[24%] h-[290px] sm:w-[32%]   rounded-[7px]'>
+        <div className=' block relative w-full md:w-[24%] h-[290px] sm:w-[32%] of:w-[49%]   rounded-[7px] mb-2'>
             <Link to={`/elanlar/detallar/${item.category}/${item.subcategory}/${item.id}`} target="_blank" rel="noopener noreferrer" className='relative font-arial w-full h-full rounded-[7px] align-top  flex flex-col bg-white overflow-hidden shadow-custom-light'>
                 <div className="img-box relative  h-[181px] ">
                     <img src={item.image} alt="" className='object-center object-cover h-full w-full ' />
@@ -57,7 +57,7 @@ const Card = ({ item }) => {
             </Link>
             <button
                 onClick={handleLike}
-                className='bg-transparent absolute top-[10px] right-[10px] z-20'
+                className='bg-transparent absolute top-[10px] right-[10px] z-10'
             >
                 {isLiked ? (
                     <PiHeartStraightFill className='h-7 w-7 text-[#ff4f08]' />
