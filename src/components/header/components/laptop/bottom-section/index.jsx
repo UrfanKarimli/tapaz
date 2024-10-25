@@ -51,7 +51,7 @@ const BottomSection = () => {
         <AiFillMessage className='h-5 w-5' />
         <span className='text-[8px] font-normal'>MESAJLAR</span>
       </NavLink>
-      <NavLink to={`/profil`} className={({ isActive }) => `flex flex-col gap-1 justify-center items-center hover:text-[#ff4f08]  ${isActive ? 'text-[#ff4f08] ' : 'text-[#8d94ad]'}`}>
+      <NavLink to={`/profile/published`} className={({ isActive }) => `flex flex-col gap-1 justify-center items-center hover:text-[#ff4f08]  ${isActive ? 'text-[#ff4f08] ' : 'text-[#8d94ad]'}`}>
         <FaUserCircle className='h-5 w-5' />
         <span className='text-[8px] font-normal'>KABİNET</span>
       </NavLink>

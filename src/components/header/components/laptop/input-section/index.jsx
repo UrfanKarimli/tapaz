@@ -43,13 +43,16 @@ const InputLg = () => {
     };
 
     return (
-        <div className='flex items-center py-4'>
-            <div className='relative w-full'>
+        <div className='flex items-center my-4 border border-[#eaebf2] rounded-[14px] overflow-hidden'>
+            <div className='text-[#8d94ad] border-0  flex items-center justify-center cursor-pointer h-10 w-10'>
+                <IoSearchSharp />
+            </div>
+            <div className='relative w-full '>
                 <Input
                     name="search"
                     type="text"
                     placeholder="Əşya və ya xidmət axtarışı"
-                    className="bg-[#f1f3f7] flex-grow border-0 h-10 w-full px-2 rounded-r-none text-[#222] text-base"
+                    className=" flex-grow border-0 h-10 w-full px-2  text-[#222] text-base"
                     value={searchInput}
                     onChange={handleChange}
                 />
@@ -74,9 +77,7 @@ const InputLg = () => {
                     </ul>
                 </div>
             </div>
-            <div className='text-[#8d94ad] border-l rounded-r flex items-center justify-center cursor-pointer bg-[#f1f3f7] h-10 w-10'>
-                <IoSearchSharp />
-            </div>
+
         </div>
     );
 };

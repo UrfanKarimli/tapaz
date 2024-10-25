@@ -9,12 +9,14 @@ import Shops from "./pages/shop";
 import NewAds from "./pages/new-ads";
 import Detallar from "./pages/detallar";
 import Messages from "./pages/messages";
+import Profil from "./pages/profile";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route >
             <Route path="/" element={<Layout />} >
                 <Route index element={<Home />} />
+                <Route path="/profile/:type?" element={<Profil/>} />
                 <Route path="/help/:type?/:id?" element={<Help/>} />
                 <Route path="/chosen" element={<Chosen/>}/>
                 <Route path="/messages/:type?" element={<Messages/>}/>
