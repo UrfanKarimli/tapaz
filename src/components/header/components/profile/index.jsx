@@ -32,7 +32,7 @@ const Profile = ({ name }) => {
                 >
                     <div className=" flex flex-col gap-1 mt-3 ">
                         <div>
-                            <Link to={'/profile/published'}
+                            <Link to={'/profile/myads/published'}
                                 className=" cursor-pointer leading-[16px] text-base p-2 rounded-sm hover:bg-[#fdfdfd] hover:text-[#ff4f08] flex items-center gap-3 "
                             >Mənim elanlarım</Link>
                         </div>

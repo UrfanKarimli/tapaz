@@ -21,6 +21,7 @@ const Header = () => {
     const [isHidden, setIsHidden] = useState(false);
     let lastScrollY = 0;
 
+    console.log('location', location.includes('/profile'))
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -83,11 +84,13 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            <div className='hidden max-lg:block px-4 bg-white'>
-                <LgTop />
-                <InputLg />
-                <LgKatalog />
-            </div>
+            {location.includes('/profile') ? (null) : (
+                <div className='hidden max-lg:block px-4 bg-white'>
+                    <LgTop />
+                    <InputLg />
+                    <LgKatalog />
+                </div>
+            )}
         </header>
     );
 };

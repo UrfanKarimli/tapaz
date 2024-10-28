@@ -30,7 +30,6 @@ const Detallar = () => {
             setLikedData(item);
         }
     };
-    // console.log('item', item)
 
 
 

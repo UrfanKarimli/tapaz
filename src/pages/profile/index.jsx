@@ -1,11 +1,12 @@
 import { BsPlusCircle } from "react-icons/bs"
-import { RiAdvertisementLine } from "react-icons/ri";
-import { Link, NavLink } from "react-router-dom"
+import { RiAdvertisementLine, RiSecurePaymentFill } from "react-icons/ri";
+import { Link, NavLink, Outlet } from "react-router-dom"
 import PayModal from "./components/pay-modal"
+import { MdManageAccounts, MdOutlineAccountCircle, MdOutlinePayment } from "react-icons/md";
 const Profil = () => {
     return (
         <div className=" container">
-            <div className=" flex justify-between">
+            <div className=" flex justify-between mt-4">
                 <h2 className=" font-bold text-[26px] font-helvetica">Şəxsi kabinet</h2>
                 <div className=" flex items-center justify-between w-80 h-[50px] rounded bg-[#f6f6f6] py-1 px-3">
                     <div>
@@ -18,22 +19,46 @@ const Profil = () => {
                 </div>
 
             </div>
-            <div className="flex  my-2">
-                <NavLink className={({ isActive })=> ` p-3  border-b flex items-center gap-2 ${isActive? ' border-b-[#ff6617] text-[#ff6617]': 'text-[#a3a3a4]'}`}>
+            <div className="flex  my-2 relative">
+                <NavLink
+                    to={`/profile/myads/published`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
                     <RiAdvertisementLine className=" h-6 w-6" />
                     <span className=" text-[#a3a3a4] ">Elanlar</span>
                 </NavLink>
-                <div className=" h-px bg-[#a3a3a4] " ></div>
+                <NavLink
+                    to={`/profile/transactions`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
+                    <MdManageAccounts className=" h-6 w-6" />
+                    <span className=" text-[#a3a3a4] ">Şəxsi hesab</span>
+                </NavLink>
+                <NavLink
+                    to={`/profile/payments`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
+                    <RiSecurePaymentFill className=" h-6 w-6" />
+                    <span className=" text-[#a3a3a4] ">Ödənişlər</span>
+                </NavLink>
+                <NavLink
+                    to={`/profile/edit`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
+                    <MdOutlineAccountCircle className=" h-6 w-6" />
+                    <span className=" text-[#a3a3a4] ">Profil</span>
+                </NavLink>
+                <NavLink
+                    to={`/profile/ads-limit`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
+                    <RiAdvertisementLine className=" h-6 w-6" />
+                    <span className=" text-[#a3a3a4] ">Elan limit</span>
+                </NavLink>
+                <NavLink
+                    to={`/profile/may-cards`}
+                    className={({ isActive }) => ` z-[1] p-3  border-b-[3px]  flex items-center gap-2 ${isActive ? ' border-b-[#ff6617] text-[#ff6617] [&>span]:text-[#111]' : 'text-[#a3a3a4] hover:border-b-[#ccc]'}`}>
+                    <MdOutlinePayment className=" h-6 w-6" />
+                    <span className=" text-[#a3a3a4] ">Kartlarım</span>
+                </NavLink>
+                <div className=" absolute left-0 bottom-0 h-[3px] w-full bg-[#ebebeb] " ></div>
             </div>
-            <div className=" w-full h-[220px] pt-24 mb-5 bg-[#f6f6f5] text-[#838383] rounded text-base  text-center">
-                <div className=" flex flex-col items-center justify-center">
-                    <p className="text-base my-4">Bu bölmədə elan yoxdur</p>
-                    <Link to={'/elanlar/new'} className='truncate rounded-[7px] w-[113px] h-10 bg-[#7ed321] text-white cursor-pointer flex gap-1 items-center py-3 px-4'>
-                        <BsPlusCircle className='h-4 w-4' />
-                        Yeni elan
-                    </Link>
-                </div>
-            </div>
+            <Outlet />
         </div>
     )
 }
