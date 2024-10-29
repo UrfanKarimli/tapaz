@@ -21,7 +21,6 @@ const Header = () => {
     const [isHidden, setIsHidden] = useState(false);
     let lastScrollY = 0;
 
-    console.log('location', location.includes('/profile'))
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;

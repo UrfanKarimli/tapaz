@@ -38,7 +38,6 @@ export const router = createBrowserRouter(
                 <Route path="/elanlar/new" element={<NewAds />} />
                 <Route path="/elanlar/detallar/:category?/:subcategory?/:id?" element={<Detallar />} />
             </Route>
-
         </Route>,
     ),
 );

@@ -8,7 +8,7 @@ const layout = () => {
         <>
             <Header />
             <BottomSection/>
-            <main className="  ">
+            <main className=" pb-5 ">
                 <Outlet />
             </main>
             <Footer/>
