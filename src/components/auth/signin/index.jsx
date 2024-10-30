@@ -5,9 +5,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import {  useState } from "react";
+import { useState } from "react";
 import { supabase } from "../../../client";
 import { useNavigate } from "react-router-dom";
+import useAuthStore from "@/services/stores/useAuthStore";
 
 const SignInSchema = z.object({
     email: z.string().email(),
@@ -15,6 +16,7 @@ const SignInSchema = z.object({
 });
 
 const Login = ({ setLogin, setOpen }) => {
+    const { setUser } = useAuthStore()
     const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState(false)
@@ -39,14 +41,13 @@ const Login = ({ setLogin, setOpen }) => {
         } else {
             setErrors(false)
             localStorage.setItem('user', JSON.stringify(data.user.user_metadata.first_name))
+            setUser(JSON.stringify(data.user.user_metadata.first_name))
+            window.dispatchEvent(new Event('userChange'))
             setOpen(false)
             navigate('/')
         }
 
     }
-
-    const currentUser = JSON.parse(localStorage.getItem('user'))
-    console.log("user", currentUser)
 
     return (
         <>

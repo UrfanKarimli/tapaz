@@ -16,6 +16,10 @@ import Payments from "./pages/profile/components/payments";
 import EditProfile from "./pages/profile/components/edit-profile";
 import LimitedAds from "./pages/profile/components/ads-limit";
 import MyBankCards from "./pages/profile/components/my-cards";
+import UserSet from "./components/user-set";
+
+console.log('userset', UserSet.user)
+
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route >

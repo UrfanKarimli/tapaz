@@ -33,7 +33,6 @@ const PaySheet = () => {
                         </SheetDescription>
                     </SheetHeader>
                     <div className=" p-4  h-screen flex flex-col overflow-y-scroll no-scrollbar">
-
                     </div>
                 </SheetContent>
             </Sheet>

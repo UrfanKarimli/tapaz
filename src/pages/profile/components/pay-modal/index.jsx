@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const PayModal = () => {
+const PayModal = ({className}) => {
     const [open, setOpen] = useState(false);
     const [pay, setPay] = useState(20);
 
@@ -32,10 +32,10 @@ const PayModal = () => {
     return (
         <>
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogTrigger className=' w-40 h-8 text-center rounded-none flex items-center justify-center bg-[#ebf6ff] text-[15px] text-[#3b88fd] border border-[#3b88fd] cursor-pointer py-[5px]'>Artır</DialogTrigger>
-                <DialogContent className=' w-[455px] gap-1 px-0'>
-                    <DialogHeader>
-                        <DialogTitle className="text-[#212c3a] text-[18px] font-normal px-6">Şəxsi hesabı artır</DialogTitle>
+                <DialogTrigger className={`${className}` }>Artır</DialogTrigger>
+                <DialogContent className=' w-[455px] max-w-full max-lg:w-full  max-lg:h-screen  max-lg:right-auto  max-lg:left-auto max-lg:translate-x-0  gap-1 px-0'>
+                    <DialogHeader className={ `max-lg: max-h-10`}>
+                        <DialogTitle className="text-[#212c3a] text-[18px] font-normal max-lg:text-center px-6">Şəxsi hesabı artır</DialogTitle>
                         <DialogDescription>
                         </DialogDescription>
                     </DialogHeader>

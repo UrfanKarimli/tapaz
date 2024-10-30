@@ -2,10 +2,10 @@ import { RiAdvertisementLine, RiSecurePaymentFill } from "react-icons/ri";
 import { Link, NavLink, Outlet } from "react-router-dom"
 import PayModal from "./components/pay-modal"
 import { MdManageAccounts, MdOutlineAccountCircle, MdOutlinePayment } from "react-icons/md";
-import PaySheet from "./components/laptop/pay-sheet";
 import { GrTransaction } from "react-icons/gr";
 import { FaUserCircle } from "react-icons/fa";
-import { CiSettings } from "react-icons/ci";
+import SettingSheet from "./components/settings";
+import { FiEdit } from "react-icons/fi";
 const Profil = () => {
     const currentUser = JSON.parse(localStorage.getItem('user'));
     return (
@@ -19,7 +19,7 @@ const Profil = () => {
                             <div>0,00 AZN</div>
                         </div>
                         <div className=" border-l border-l-[#ebebeb] pl-3">
-                            <PayModal />
+                            <PayModal className={`w-40 h-8 text-center rounded-none flex items-center justify-center bg-[#ebf6ff] text-[15px] text-[#3b88fd] border border-[#3b88fd] cursor-pointer py-[5px]`} />
                         </div>
                     </div>
                 </div>
@@ -67,13 +67,16 @@ const Profil = () => {
             <div className=" hidden max-lg:block ">
                 <div className="relative">
                     <div className="pt-16 px-4 bg-[#f6f7fa] ">
-                        <div className="fixed top-0 flex justify-between items-center w-full bg-[#f6f7fa] py-2">
+                        <div className="fixed top-0 left-0 right-0 flex justify-between items-center w-full bg-[#f6f7fa] px-4 py-2">
                             <div className="flex  items-center gap-2">
                                 <FaUserCircle className=" w-10 h-10 text-[#858d97]" />
                                 <span>{currentUser}</span>
                             </div>
-                            <div>
-                                <CiSettings className="" />
+                            <div className=" flex items-center gap-6">
+                                <Link to={`/profile/edit`}>
+                                <FiEdit />
+                                </Link>
+                                <SettingSheet />
                             </div>
                         </div>
                         <div className=" font-helvetica bg-white py-2 px-4 flex items-center justify-between  rounded-[7px] ">
@@ -81,7 +84,7 @@ const Profil = () => {
                                 <span className=" text-[#858d97] text-xs ">Şəxsi hesab</span>
                                 <div>0,00 AZN</div>
                             </div>
-                            <PaySheet />
+                            <PayModal className={`bg-[#4c88f9] h-10  px-7 text-[15px] text-white font-normal rounded-[7px]`} />
                         </div>
                         <nav className=" flex h-28 items-center justify-center gap-4 ">
                             <Link className={` flex flex-col items-center text-[#212c3a] text-xs font-normal`}>

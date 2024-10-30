@@ -46,7 +46,8 @@ const Profile = ({ name }) => {
                             onClick={() => {
                                 lougOut()
                             }}
-                        >Çıxış <IoIosLogOut /></div>
+                        >Çıxış <IoIosLogOut />
+                        </div>
                     </div>
                 </HoverCardContent>
             </HoverCard>
