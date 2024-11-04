@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 import elanyoxdur from '@/assets/img/elanyoxdur.svg'
 const MyAds = () => {
     return (
-        <div>
+        <div className=' '>
             <div className=" max-lg:hidden relative gap-1 bg-[#f8f8f8] flex my-4">
                 <NavLink
                     to={`/profile/myads/published`}
@@ -29,29 +29,28 @@ const MyAds = () => {
                 <div className=" absolute left-0 bottom-0 h-[3px] w-full bg-[#ebebeb] " >
                 </div>
             </div>
-            <div className='hidden max-lg:flex gap-2 my-4 px-4 '>
+            <div className='hidden max-lg:flex gap-2 my-4 px-4 overflow-scroll w-full no-scrollbar'>
                 <NavLink
                     to={`/profile/myads/published`}
-                    className={({ isActive }) => `  text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
+                    className={({ isActive }) => ` flex-shrink-0 flex-grow-0 basis-auto truncate text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
                     Hazırda saytda (0)
                 </NavLink>
                 <NavLink
                     to={`/profile/myads/expired`}
-                    className={({ isActive }) => `  text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
+                    className={({ isActive }) => `flex-shrink-0 flex-grow-0 basis-auto truncate text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
                     Müddəti başa çatmış (0)
                 </NavLink>
                 <NavLink
                     to={`/profile/myads/pending`}
-                    className={({ isActive }) => `  text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
+                    className={({ isActive }) => `flex-shrink-0 flex-grow-0 basis-auto truncate text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
                     Gözləmədə (0)
                 </NavLink>
                 <NavLink
                     to={`/profile/myads/rejected`}
-                    className={({ isActive }) => `  text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
+                    className={({ isActive }) => `flex-shrink-0 flex-grow-0 basis-auto truncate text-sm leading-4  font-normal rounded-[20px] flex items-center justify-center h-9 px-4 ${isActive ? ' bg-[#ff4f08] text-white' : 'text-[#212c3a] bg-[#f6f7fa]'}`}>
                     Dərc olunmamış (0)
                 </NavLink>
             </div>
-
             <div className=" w-full h-[220px] pt-24 mb-5 bg-[#f6f6f5] max-lg:bg-white max-lg:py-8 text-[#838383] rounded text-base  text-center">
                 <div className=" flex flex-col items-center justify-center">
                     <img className=' hidden max-lg:block' src={elanyoxdur} alt="" />

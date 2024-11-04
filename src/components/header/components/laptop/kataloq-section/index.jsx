@@ -25,7 +25,7 @@ const LgKatalog = () => {
                         </Link>
                     </div>
                 ))}
-                <div
+                {/* <div
                     className=' min-w-[80px]  '>
                     <Link
                         className='w-[90px] group flex  flex-col justify-center items-center '
@@ -37,7 +37,7 @@ const LgKatalog = () => {
                             Mağazalar
                         </span>
                     </Link>
-                </div>
+                </div> */}
             </div>
         </div>
     )

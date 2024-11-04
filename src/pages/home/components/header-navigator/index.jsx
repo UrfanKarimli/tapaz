@@ -88,7 +88,7 @@ const HeadNav = () => {
                                 Kataloq
                             </span>
                         </div>
-                        <Link
+                        {/* <Link
                             className='w-[90px] group  flex-col justify-center '
                             to={'/elanlar/shop'}>
                             <div className=' group-hover:border-[#ff4f08] mb-1 overflow-hidden flex items-end justify-end bg-white border pr-[1px] pb-[1px] border-solid border-[#eaebf2] rounded-[18%] w-[90px] h-[90px] transition-all duration-300 ease-in-out'>
@@ -97,7 +97,7 @@ const HeadNav = () => {
                             <span className='font-arial w-[90px]  text-center flex justify-center text-sm text-[#212c3a] group-hover:text-[#ff4f08] align-top h-[34px] transition-all duration-300 ease-in-out'>
                                 Mağazalar
                             </span>
-                        </Link>
+                        </Link> */}
                     </div>
                     <div ref={katalogRef} className={`bg-[#fff] p-2 rounded-[4px] ${isOpen ? 'block' : 'hidden'}`}>
                         <ul className='grid grid-cols-4 grid-rows-13'>
@@ -114,7 +114,6 @@ const HeadNav = () => {
                                                     {subcat.name}
                                                 </Link>
                                                 <span className="text-[#8d94ad] pl-1 text-sm">{subcat.items.length}</span>
-
                                             </li>
                                         ))}
                                     </ul>

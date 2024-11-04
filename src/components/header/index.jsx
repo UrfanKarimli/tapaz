@@ -83,7 +83,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            {location.includes('/profile') ? (null) : (
+            {location.includes('/profile') || location.includes('/elanlar/new') ? (null) : (
                 <div className='hidden max-lg:block px-4 bg-white'>
                     <LgTop />
                     <InputLg />

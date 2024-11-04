@@ -10,28 +10,25 @@ import allCat from '@/assets/img/all-categories.png'
 import { katalogData } from '@/components/header/MockData/katalog'
 import Subkatalog from "../subkatalog"
 import { useSubkatalog } from "@/services/stores/useSubkatalog"
-
-const SideSheet = () => {
-    const { setSubDatas,setOpen } = useSubkatalog()
+import { FaChevronRight } from "react-icons/fa6";
+import { SiWindows } from "react-icons/si";
+import { FaChevronLeft } from "react-icons/fa"
+const KatalogSheet = () => {
+    const { setSubDatas, setOpen } = useSubkatalog()
     return (
-        <div>
+        <>
             <Sheet>
-                <SheetTrigger>
+                <SheetTrigger className=" w-full h-[60px] flex items-center justify-between text-[#8d94ad]">
                     <div
-                        className=' min-w-[80px]  '>
-                        <div
-                            className='w-[90px] group flex  flex-col justify-center items-center '
-                        >
-                            <div className=' w-[60px] h-[60px] group-hover:border-[#ff4f08] mb-1 flex items-center justify-center bg-[#f6f7fa]   rounded-[16px]  transition-all duration-300 ease-in-out'>
-                                <img src={allCat} className='h-[30px] w-[30px] object-cover object-center' alt="" />
-                            </div>
-                            <span className='font-arial   text-center flex justify-center text-[11px] text-[#212c3a] group-hover:text-[#ff4f08] align-top  transition-all duration-300 ease-in-out'>
-                                Kataloq
-                            </span>
-                        </div>
+                        className=' flex items-center gap-2 '>
+                        <SiWindows />
+                        <span>Kateqoriya <sup className=" text-[#fe6617] text-base leading-2 h-min">*</sup></span>
                     </div>
+                    <FaChevronRight />
                 </SheetTrigger>
-                <SheetContent className={` w-5/6 sm:max-w-5/6 hover:[&>button]:text-[#ff4f08]`}>
+                <SheetContent
+                    icon={<FaChevronLeft className=" h-5 w-5 hover:text-[#ff4f08]" />}
+                    className={` w-5/6 sm:max-w-5/6 hover:[&>button]:text-[#ff4f08] [&>button]:left-4 [&>button]:right-auto `}>
                     <SheetHeader>
                         <SheetTitle className={' flex items-center justify-center'}>Kataloq</SheetTitle>
                         <SheetDescription className={''}>
@@ -40,10 +37,10 @@ const SideSheet = () => {
                     <div className=" h-screen flex flex-col overflow-y-scroll no-scrollbar ">
                         {katalogData?.map((item) => (
                             <div
-                            onClick={()=> {
-                                setOpen(true)
-                                setSubDatas(item)
-                            }}
+                                onClick={() => {
+                                    setOpen(true)
+                                    setSubDatas(item)
+                                }}
                                 key={item.id} className=" py-2 flex gap-4 text-[#212c3a] border-b  cursor-pointer ">
                                 <div className=' flex-none basis-10   mb-1 flex items-center justify-center bg-[#f6f7fa]   rounded  '>
                                     <img src={item.img} className=' object-contain' alt="" />
@@ -57,9 +54,9 @@ const SideSheet = () => {
                     </div>
                 </SheetContent>
             </Sheet>
-            <Subkatalog/>
-        </div>
+            <Subkatalog />
+        </>
     )
 }
 
-export default SideSheet
+export default KatalogSheet
