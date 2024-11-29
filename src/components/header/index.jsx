@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaHeart } from "react-icons/fa";
 import { AiFillMessage } from "react-icons/ai";
@@ -66,7 +66,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="header-bottom max-lg:hidden bg-[#ff4f08] py-4">
+            <div className="header-bottom max-lg:hidden bg-[#ff4f08] py-4 ">
                 <div className="container flex items-center gap-3 max-h-10">
                     <Link className='flex items-center h-10' to={'/'}>
                         <img src={Logo} alt="Logo" />

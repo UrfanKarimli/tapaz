@@ -16,10 +16,8 @@ import Payments from "./pages/profile/components/payments";
 import EditProfile from "./pages/profile/components/edit-profile";
 import LimitedAds from "./pages/profile/components/ads-limit";
 import MyBankCards from "./pages/profile/components/my-cards";
-import UserSet from "./components/user-set";
-
-console.log('userset', UserSet.user)
-
+import TechPages from "./pages/tech-pages";
+import TopQuestions from "./pages/tech-pages/components/top-questions";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route >
@@ -33,6 +31,9 @@ export const router = createBrowserRouter(
                     <Route path="ads-limit/:type?" element={<LimitedAds />} />
                     <Route path="may-cards/:type?" element={<MyBankCards />} />
                 </Route>
+                <Route path="/techpages" element={<TechPages />}>
+                    <Route path="help" element={<TopQuestions />} />
+                </Route>
                 <Route path="/help/:type?/:id?" element={<Help />} />
                 <Route path="/chosen" element={<Chosen />} />
                 <Route path="/messages/:type?" element={<Messages />} />
@@ -43,5 +44,5 @@ export const router = createBrowserRouter(
                 <Route path="/elanlar/detallar/:category?/:subcategory?/:id?" element={<Detallar />} />
             </Route>
         </Route>,
-    ),
+    )
 );

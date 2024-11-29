@@ -60,20 +60,20 @@ const Footer = () => {
                 </div>
                 <div className='h-[2px] w-full bg-[#f1f3f7]'></div>
                 <div className="my-6 flex items-center justify-between container ">
-                    <a className='font-arial text-[#212c3a] cursor-pointer text-sm' href="">Layihə haqqında</a>
-                    <a className='font-arial text-[#212c3a] cursor-pointer text-sm' href="">Qaydalar</a>
-                    <a className='font-arial text-[#212c3a] cursor-pointer text-sm' href="">İstifadəçi razılaşması</a>
-                    <a className='font-arial text-[#212c3a] cursor-pointer text-sm' href="">Ümumi oferta müqaviləsi</a>
-                    <a className='font-arial text-[#212c3a] cursor-pointer text-sm' href="">Məxfilik siyasəti</a>
+                    <Link className='font-arial text-[#212c3a] cursor-pointer text-sm' to={'/techpages/help'}>Layihə haqqında</Link>
+                    <Link className='font-arial text-[#212c3a] cursor-pointer text-sm' >Qaydalar</Link>
+                    <Link className='font-arial text-[#212c3a] cursor-pointer text-sm' >İstifadəçi razılaşması</Link>
+                    <Link className='font-arial text-[#212c3a] cursor-pointer text-sm'>Ümumi oferta müqaviləsi</Link>
+                    <Link className='font-arial text-[#212c3a] cursor-pointer text-sm' >Məxfilik siyasəti</Link>
                 </div>
 
             </div>
             <div className=' hidden max-lg:block  border-t px-4 py-5'>
                 <div className=' flex flex-col'>
-                    <Link className='font-helvetica text-[#8d94ad] mb-4 text-sm'>
+                    <Link to={'/help/popular_questions'} className='font-helvetica text-[#8d94ad] mb-4 text-sm'>
                         Yardım
                     </Link>
-                    <Link className='font-helvetica text-[#8d94ad] mb-4 text-sm'>
+                    <Link to={'/techpages/help'} className='font-helvetica text-[#8d94ad] mb-4 text-sm'>
                         Layihə haqqında
                     </Link>
                     <Link className='font-helvetica text-[#8d94ad] mb-4 text-sm'>
