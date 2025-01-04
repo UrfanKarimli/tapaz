@@ -41,7 +41,7 @@ const DropDownSelect = ({ Seen, Name, MapData, IfElse, dynamicKey }) => {
                     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                         <DropdownMenuTrigger asChild>
                             <Button
-                                className={` border-none py-0 flex  items-center rounded bg-[#fff] hover:bg-white hover:text-[] [&>svg]:data-[state=open]:rotate-180 cursor-pointer 
+                                className={` border-none py-0 flex  items-center rounded bg-[#fff] hover:bg-white hover:text-[] [&>svg]:h-5 [&>svg]:text-[20px] [&>svg]:data-[state=open]:rotate-180 cursor-pointer 
                                 text-base border border-[#f1f3f7] focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 `}
                                 onClick={() => setIsOpen(prev => !prev)}
                             >

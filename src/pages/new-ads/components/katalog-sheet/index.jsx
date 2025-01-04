@@ -6,12 +6,13 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import allCat from '@/assets/img/all-categories.png'
+// import allCat from '@/assets/img/all-categories.png'
 import { katalogData } from '@/components/header/MockData/katalog'
 import Subkatalog from "../subkatalog"
 import { useSubkatalog } from "@/services/stores/useSubkatalog"
 import { FaChevronRight } from "react-icons/fa6";
-import { SiWindows } from "react-icons/si";
+import { MdWindow } from "react-icons/md";
+
 import { FaChevronLeft } from "react-icons/fa"
 const KatalogSheet = () => {
     const { setSubDatas, setOpen } = useSubkatalog()
@@ -21,7 +22,7 @@ const KatalogSheet = () => {
                 <SheetTrigger className=" w-full h-[60px] flex items-center justify-between text-[#8d94ad]">
                     <div
                         className=' flex items-center gap-2 '>
-                        <SiWindows />
+                        <MdWindow />
                         <span>Kateqoriya <sup className=" text-[#fe6617] text-base leading-2 h-min">*</sup></span>
                     </div>
                     <FaChevronRight />

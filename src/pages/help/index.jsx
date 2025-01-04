@@ -76,7 +76,8 @@ const Help = () => {
                     <div className=' text-[#212c3a] text-[22px] font-medium mt-8 mb-10'>{getName()}</div>
                     {
                         getData()?.map((item) => (
-                            <div className=' max-w-[595px] border-t border-t-[#f1f3f7] text-base leading-[1.33] relative'>
+                            <div 
+                            key={item.id} className=' max-w-[595px] border-t border-t-[#f1f3f7] text-base leading-[1.33] relative'>
                                 <Link
                                     onClick={() => handleLinkClick(item.id)}
                                     className=' text-[#212c3a] flex items-center h-[60px]' to={`/help/${type}/${item.id}`}>{item.text}

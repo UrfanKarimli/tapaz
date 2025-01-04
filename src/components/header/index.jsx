@@ -37,6 +37,7 @@ const Header = () => {
         };
     }, []);
 
+    
     return (
         <header className={`${isHidden ? '-translate-y-[100%]' : 'translate-y-0'} sticky top-0 left-0 w-full z-40 transform transition-transform duration-500`}>
             <div className="header-top max-lg:hidden bg-[#f8f9fd]">
