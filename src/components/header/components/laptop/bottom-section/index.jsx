@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdHome } from "react-icons/md";
 import { AiFillMessage } from 'react-icons/ai';
@@ -10,7 +10,7 @@ import useAuthStore from '@/services/stores/useAuthStore';
 const BottomSection = () => {
   const { user, setUser } = useAuthStore()
   const [isHidden, setIsHidden] = useState(false);
-  let lastScrollY = 0;
+  let lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleUserChange = () => {
@@ -22,17 +22,17 @@ const BottomSection = () => {
     return () => {
       window.removeEventListener('userChange', handleUserChange);
     };
-  }, []);
+  }, [setUser]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 300) {
+      if (currentScrollY > lastScrollY.current && currentScrollY > 300) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
       }
-      lastScrollY = currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
     window.addEventListener('scroll', handleScroll);
     return () => {

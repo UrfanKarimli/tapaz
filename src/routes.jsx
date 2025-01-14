@@ -18,6 +18,8 @@ import LimitedAds from "./pages/profile/components/ads-limit";
 import MyBankCards from "./pages/profile/components/my-cards";
 import TechPages from "./pages/tech-pages";
 import TopQuestions from "./pages/tech-pages/components/top-questions";
+
+
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route >

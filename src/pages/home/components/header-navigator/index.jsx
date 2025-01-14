@@ -8,7 +8,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import magaza from '@/assets/img/katalog/magaza.png'
+// import magaza from '@/assets/img/katalog/magaza.png'
 import allCat from '@/assets/img/all-categories.png'
 import { useState, useEffect, useRef } from 'react'
 
